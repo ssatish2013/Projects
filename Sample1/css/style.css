@@ -1,0 +1,240 @@
+body, article, article > header, article > section, article > footer, article > section > form > div > div > div { 
+	font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+	clear: both;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+body { 
+	background-color: #FEFEFE;
+}
+
+article { 
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #CCCCCC;
+	width: 700px;
+}
+
+article > header { 
+	background-color: #3F3F3D;
+	color: #FEFEFE;
+	text-align: center;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+article > section { 
+	background-color: #FEFEFE;
+	color: #3F3F3D;
+}
+
+article > footer { 
+	background-color: #CCCCCC;
+	color: #333333;
+}
+
+article > header > div { 
+	padding: 8px;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+article > section > form > div { 
+	clear: both;
+	display: block;
+	height: 38px;
+	line-height: 34px;
+}
+
+article > section > form > div > div { 
+	height: 38px;
+}
+
+article > section > form > div > div:nth-child(odd) { 
+	background-color: #3F3F3D;
+	color: #FEFEFE;
+}
+
+article > section > form > div > div:nth-child(even) { 
+	background-color: #FEFEFE;
+	color: #333333;
+}
+
+article > section > form > div.result { 
+	background-color: #FEFEFE !important;
+	color: #333333;
+	height: auto;
+	text-align: left;
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+article > section > form > div.result > div { 
+	float: none !important;
+	background-color: #333333 !important;
+	color: #FEFEFE !important;
+	width: auto !important;
+	text-align: center;
+}
+
+article > section > form > div.last { 
+	background-color: #3F3F3D !important;
+	height: 3em;
+	padding: 5px;
+	text-align: center;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+article > section > form > div > div:first-child { 
+	float: left;
+	padding: 5px;
+	width: 240px;
+	white-space: nowrap;
+}
+
+article > section > form > div > div:last-child { 
+	float: right;
+	padding: 5px;
+	width: 390px;
+	white-space: nowrap;
+}
+
+article > section > form > div > div > label { 
+	font-weight: bold;
+}
+
+article > section > form > div > div > div { 
+	position: absolute;
+	border: 1px solid #999999;
+	width: 210px;
+	padding-left: 4px;
+	padding-right:4px;
+}
+
+article > section > form > div > div.error > div { 
+	border: 1px solid red;
+	color: red;
+	font-size: 12px;
+}
+
+article > section > form > div > div.error > span { 
+	float: right;
+	font-size: 12px;
+	color: red;
+	width: 160px;
+}
+
+article > section > form > div > div > div > span { 
+	color: #333333 !important;
+	font-size: 15px;
+}
+
+article > footer > nav { 
+	clear: both;
+	font-size: 0.75em;
+	font-style: italic;
+}
+
+article > footer > nav:last-child { 
+	text-align: center;
+}
+
+article > footer > nav > div { 
+	float: left;
+	margin-right: 10px;
+}
+
+article > footer > nav > div > a { 
+	color: blue;
+}
+
+input[type=text] { 
+	outline: none;
+	border: 0px;
+	margin: 0px
+}
+
+select { 
+	margin: 0px;
+	clear: both;
+	padding: 5px;
+	width: 16.25em;
+	white-space: nowrap;
+}
+
+input[type=submit] { 
+	padding: 7px;
+	background-color: green;
+	color: #FEFEFE;
+	border: 1px solid #999999;
+	font-weight: bold;
+	font-size: 1.25em;
+	cursor: pointer;
+	width: 10em;
+}
+
+.modalDialog { 
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 99999;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.modalDialog > div { 
+	position: relative;
+	margin: 10% auto;
+	background-color: #FEFEFE;
+	color: #333333;
+	width: 520px;
+	height: 340px;
+	overflow: auto;
+	padding: 8px;
+	border: 2px solid #999999;
+}
+
+.modalDialog > div > a.close:link { 
+	text-decoration: none;
+}
+
+.modalDialog > div > a.close > div { 
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	border-left: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	background-color: #EDEDED;
+}
+
+.modalDialog > div > a.close:hover > div { 
+	background-color: #999999;
+	color: #FEFEFE;
+	cursor: pointer;
+}
+
+div.result { 
+	display: none;
+}
+
+div.result > div { 
+	padding: 7px;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px solid #999999;
+}
+
+#faq:target, #help:target, #terms:target { 
+	opacity: 1;
+	pointer-events: auto;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<errors>
+	<general>
+		<number>Please enter a numeric value!</number>
+		<empty>Please enter a value!</empty>
+	</general>
+	
+	<empty>
+		<first>Please enter a first name!</first>
+		<last>Please enter a last name!</last>
+		<email>Please enter an email address!</email>
+		<sex>Please select your gender!</sex>
+	</empty>
+	
+	<length>
+		<first min="2">Your first name must be atleast <min></min> characters long!</first>
+		<last min="2">Your last name must be atleast <min></min> characters long!</last>
+	</length>
+	
+	<numeric>
+		<first>Your first name cannot be numeric</first>
+		<last>Your last name cannot be numeric</last>
+	</numeric>
+	
+	<error>
+		<first>Please enter a valid first name!</first>
+		<last>Please enter a valid last name!</last>
+		<email>Please enter a valid email address!</email>
+	</error>
+</errors>
