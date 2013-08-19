@@ -1,0 +1,47 @@
+.intro { 
+	margin: 0;
+	padding: 5px;
+	color: #666;
+	font-size: 11px;
+	white-space: nowrap;
+	padding-left: 20px;
+	position: relative;
+	top: -15px;
+}
+#inviting ul li{
+	padding: 10px 0 10px 0;
+}
+
+#contributionLink,
+#contributionLink input{
+	color: #414042;
+	font-size:12px;
+}
+
+#contributionLink > label{ 
+	font-weight: bold;
+}
+
+#contributionLink{
+	position:relative;
+	top:-15px;
+	right:20px;
+	float:right;
+}
+
+#contributionLink input{
+	width:210px;
+	height:25px;
+	padding:0 3px 0;
+	border-color:#b2b2b2 #dfdfdf #dfdfdf #b2b2b2;
+	border-style: solid;
+	border-width:1px;
+	-webkit-box-shadow: 0 1px 0 0 #e6e6e6 inset;
+	-moz-box-shadow: 0 1px 0 0 #e6e6e6 inset;
+	box-shadow: 0 1px 0 0 #e6e6e6 inset;
+	color:#000;
+	background-color: #f9f9f9;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}

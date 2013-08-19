@@ -1,0 +1,105 @@
+body{
+	padding: 20px;
+	font-family: Arial, Helvetica, "Times New Roman", "Courier New";
+}
+div#accordion > * { 
+	display: none;
+}
+.ui-icon {
+    left: 0.5em;
+    margin-top: -9px !important;
+    position: absolute;
+    top: 50%;
+    height: 21px;
+    width: 21px;
+}
+.ui-icon-triangle-1-s{
+	background: url("//gca-common.s3.amazonaws.com/assets/content_open.png") 0px 0px no-repeat !important;
+}
+.ui-icon-triangle-1-e{
+	background: url("//gca-common.s3.amazonaws.com/assets/content_close.png") 0px 0px no-repeat !important;
+}
+.ui-widget-content{
+	background: none;
+	border: none;
+	font-size: 12px;
+	line-height: 18px;
+}
+.ui-accordion .ui-accordion-content, .ui-accordion-content{
+	padding: 0 2.2em 1em 2.2em;
+	color: #414042;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited, .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited, 
+.ui-state-hover a, .ui-state-hover a:link, .ui-state-hover a:visited
+ {
+    color: #414042;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+.ui-state-active, .ui-state-default, .ui-state-hover , .ui-widget-header{
+	background: #F9F9F9;
+	border: 1px solid #DFDFDF;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.ui-accordion .ui-accordion-header{
+	margin-bottom: 15px;
+}
+.ui-widget{
+	font-family: Arial, Helvetica, "Times New Roman", "Courier New";
+}
+.ui-accordion .ui-accordion-header .ui-icon{
+	top: 45%;
+}
+.ui-widget-content dl dt{
+	background: url("//gca-common.s3.amazonaws.com/assets/content_bullet.png") 0px 0px no-repeat;
+	padding: 4px 0 0 31px;
+	height: 29px;
+	color: #E11E00;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.ui-widget-content dl dt span{
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	position: relative;
+	left: -21px;
+	text-shadow: 1px 1px #0d0d0d;
+}
+.ui-widget-content dl dd{
+	padding: 15px 0 15px 0;
+	font-size: 14px;
+}
+.ui-widget-content dl dd img{
+	float: right;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.help{
+}
+.faq h2{
+	padding-top: 20px;
+	color: #E11E00;
+	font-size: 12px;
+	font-weight: 600;
+}
+.term p {
+	padding:10px 0;
+}
+.term ol li {
+	text-align:left
+}
+.privacy h2, .privacy h3 {
+	text-align: left;
+	padding-bottom: 0px;
+}
+.term p b{
+	font-weight: normal;
+}

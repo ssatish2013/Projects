@@ -1,0 +1,20 @@
+<h4>Enter information below to get started</h4>
+<form method='post'>
+<ul id="promoList">
+	<li>
+		Please enter the first 6 digits of your eligible Citi Credit Card or Citibank&reg; Debit MasterCard&reg;
+	</li>
+	<li>
+		<label for="promoCodePrePop">First 6 digits:</label>
+		<input id="promoCodePrePop" name="promoCode" type="text" />
+	</li>
+	<li class="buttons">
+		<label class="buttonLabel cancel">
+			<input type="button" class="cancel" value="Cancel" />
+		</label>
+		<label class="buttonLabel">
+			<input type="submit" value="Continue" />
+		</label>
+	</li>
+</ul>
+</form>

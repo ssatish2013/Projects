@@ -1,0 +1,7 @@
+<?php
+require_once('../../includes/init.php');
+$kaptchaUrl = settingModel::getSetting('kountConfig', 'kaptchaUrl');
+$m=$_GET['m'];
+$s=$_GET['s'];
+header("HTTP/1.1 302 Found");
+header("Location: $kaptchaUrl/logo.gif?m=$m&s=$s");

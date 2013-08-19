@@ -1,0 +1,269 @@
+body, div#content, .block { 
+	padding: 0;
+	margin: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	/*-moz-user-select: none;*/
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+	font-family: Arial, Helvetica, "Times New Roman", "Courier New";
+}
+
+@font-face { 
+    font-family: "Rockwell Std Regular";
+        	src: url("/fonts/RockwellStd.woff") format("woff"); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: "Rockwell Std Bold";
+        	src: url("/fonts/RockwellStd-Bold.woff") format("woff"); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: "Rockwell Std Italic";
+        	src: url("/fonts/RockwellStd-Italic.woff") format("woff"); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: "Rockwell Std BoldItalic";
+        	src: url("/fonts/RockwellStd-BoldItalic.woff") format("woff"); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+div#container { 
+	padding: 8px;
+	color: #535253;
+	width: 692px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.block {
+	display: block;
+	clear: both;
+}
+.confBlock { 
+	font-size:14px;
+	line-height: 75px;
+}
+#header { 
+	border: 1px solid #eee;
+	height: 114px;
+}
+
+#img-header { 
+	position: absolute;
+	width: 692px !important;
+}
+
+#img-logo1 { 
+	position: absolute;
+	left: 25px;
+	top: 40px;
+}
+
+#img-logo {
+	position: relative;
+}
+
+#img-logo > a, #img-logo1 { 
+	outline: none;
+	border: 0px;
+	text-decoration: none;
+}
+
+#img-banner {
+	width: 300px;
+	height: 190px;
+	position: relative;
+	left: 28px;
+	top: 36px;
+} 
+
+#banner {
+	height: 257px;
+	position: relative;
+}
+
+.banner-block { 
+	float: left;
+	width: 320px;
+	height: 257px;
+}
+
+.banner-message-block {
+	position: relative;
+	top: 38px;
+}
+
+.banner-message { 
+	color: #FFF;
+	font-size: 30px;
+	font-family: "Rockwell Std Regular";
+}
+
+.banner-from { 
+	color: #FFF;
+	font-size: 16px;
+	font-family: "Rockwell Std Regular";
+}
+
+.banner-amount {
+	padding: 12px 10px 6px 12px;
+	font-size: 24px;
+	font-weight: bold;
+	font-family: "Rockwell Std Regular";
+	background-color: #FFFFFF;
+	background-color: rgba(255, 255, 255, 0.6);
+	color: #36528F;
+}
+
+.banner-break { 
+	margin: 12px 12px 12px 30px;
+}
+
+.banner-extra-break { 
+	position: relative;
+	top: 12px;
+}
+
+#info {
+	padding: 0;
+}
+
+.info-header { 
+	margin-top: 26px;
+	font-weight: bold;
+	font-size: 24px;
+	color: #e10018;
+}
+
+.info-message { 
+	margin-top: 10px;
+	font-size: 16px;
+	border-bottom: 1px solid #eee;
+}
+
+.bold { 
+	font-weight: bold;
+}
+
+.info-message-height {
+	height: 58px;
+}
+
+.info-help { 
+	padding: 6px;
+	padding-left: 0;
+	font-size: 16px;
+	border-bottom: 1px solid #eee;
+}
+
+.info-steps-block {
+	margin-top: 16px;
+	clear: both;
+	line-height: 1.15em;
+}
+
+.info-steps { 
+	float: left;
+	margin-right: 4px;
+	width: 210px;
+}
+
+.info-steps-header { 
+	font-size: 14px;
+	color: #e10018;
+}
+
+.info-steps-message { 
+	margin-top: 8px;
+	font-size: 12px;
+}
+
+.divider { 
+	width: 20px;
+}
+
+#barcode { 
+	position: relative;
+	top: 22px;
+	background-color: #F9F9F9;
+	color: #b3b3b3;
+	text-align: center;
+	font-size: 21px;
+	font-weight: bold;
+	height: 142px;
+	border: 1px solid #eee;
+}
+
+#barcode div {
+	position: relative;
+	top: 58px;
+}
+
+.disclaimer-block { 
+	margin-top: 40px;
+	font-size: 11px;
+	line-height: 1.35em;
+}
+
+#disclaimer-title {
+	text-transform: uppercase;
+}
+
+.footer-block-inner-item {
+	width: 100px;
+}
+
+.footer-block-inner { 
+	float: right;
+	white-space: nowrap;
+	position: relative;
+	top: 11px;
+	padding-right: 8px;
+}
+
+.footer-block { 
+	margin-top: 18px;
+	padding: 0;
+	padding-left: 8px;
+	height: 36px;
+	background-color: #000;
+	color: #FFF;
+	font-size: 11px;
+}
+
+a.sp-link:link, a.sp-link:visited, a.sp-link:active {
+	color: #FFF;
+	text-decoration: none;
+}
+
+a.sp-link:hover {
+	text-decoration: underline;
+}
+
+#banner-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 692px;
+}
+
+/* Stylesheets for print view */
+@media print {
+	body {
+		-webkit-print-color-adjust: exact;
+	}
+}

@@ -1,0 +1,3 @@
+{#friends}
+  <li>{name}, {formatted_birthday}</li>
+{/friends}

@@ -1,0 +1,10 @@
+div.thankyouform > div.caution {
+	padding: 7px;
+	position: relative;
+	top: 10px;
+	clear: both;
+	background-color: rgb(226, 30, 0);
+	border: 1px dashed #FFF;
+	color: #FFF;
+	font-size: 16px;
+}

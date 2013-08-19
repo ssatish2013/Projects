@@ -1,0 +1,29 @@
+<h4>{langs.sendEmailTitle} <div class="close"></div></h4>
+<form validate>
+  <ul>
+    <li>
+      <label for="addresses">{langs.sendEmailAddress}</label>
+      <textarea id="addresses" name="addresses" title="Email" data-validate='["required"]'></textarea>
+      <div class="hint">{langs.sendEmailCommaSeparate}</div>
+    </li>
+    <li>
+      <label for="name">{langs.sendEmailEnterName}</label>
+      <input id="senderName" name="senderName" value="{senderName}" data-validate='["required"]' />
+    </li>
+    <li>
+      <label for="message">{langs.sendEmailEnterMessage}</label>
+      <textarea maxlength="300" id="message" name="message" title="Personal message" data-validate='["required"]'></textarea>
+    </li>
+    <li class="buttons">
+
+      <input type="hidden" name="giftGuid" value="{giftGuid}" />
+    
+      <label class="buttonLabel cancel">
+        <input type="submit" value="{langs.sendEmailButtonCancel}" />
+      </label>
+      <label class="buttonLabel">
+        <input type="submit" value="{langs.sendEmailButtonSend}" />
+      </label>
+    </li>
+  </ul>
+</form>

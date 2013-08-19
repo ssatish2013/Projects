@@ -1,0 +1,104 @@
+// Browser compatability
+
+.ff3 #status.invitee ul li label {
+        top: 5px;
+}
+
+.ff3_5 #status.invitee ul li label {
+        top: 5px;
+}
+
+.ff3_6 #status.invitee ul li label {
+        top: 5px;
+}
+
+.chrome #status.invitee ul li label {
+        top: -5px;
+}
+
+.ie #status.invitee ul li label {
+        top: 20px;
+}
+
+.ie8 #status.invitee ul li label {
+        top: 20px;
+}
+
+.safari #status.invitee ul li label {
+        top: -6px;
+}
+
+.safari3 #status.invitee ul li label {
+        top: -6px;
+}
+
+.ie #status fieldset {
+        position: relative;
+        top: -15px;
+}
+
+.ie8 #status fieldset {
+        position: relative;
+        top: -18px;
+}
+
+.ie8 #design.tile #card ul li.amount span#symbolAndAmount {
+	background-color: #FFFFFF !important;
+	filter:alpha(opacity=60);
+	color: #999999;
+}
+
+.ie #content div ul li fieldset input[type='radio'] + label, .ie #content div ul li fieldset input[type='radio'].checked + label,
+.ie #content div ul li fieldset input[type='radio'], .ie #content div ul li fieldset input[type='radio'].checked {
+	margin: 0;
+	float: left;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.ie #content div ul li fieldset input[type='radio'] + label, .ie #content div ul li fieldset input[type='radio'].checked + label {
+	width: 70px;
+}
+
+.ie #content div ul li fieldset input[type='radio'], .ie #content div ul li fieldset input[type='radio'].checked {
+	width: 0px;
+}
+
+.ie #content div ul li fieldset input[type='radio'].checked {
+	margin-left: -2px;
+}
+
+.ie8 #content div ul li fieldset input[type='radio'] + label, .ie8 #content div ul li fieldset input[type='radio'].checked + label,
+.ie8 #content div ul li fieldset input[type='radio'], .ie8 #content div ul li fieldset input[type='radio'].checked {
+        margin: 0;
+        float: left;
+        white-space: nowrap;
+        overflow: hidden;
+}
+
+.ie8 #content div ul li fieldset input[type='radio'] + label, .ie8 #content div ul li fieldset input[type='radio'].checked + label {
+        width: 70px;
+}
+
+.ie8 #content div ul li fieldset input[type='radio'], .ie8 #content div ul li fieldset input[type='radio'].checked {
+        width: 0px;
+}
+
+.ie8 #content div ul li fieldset input[type='radio'].checked {
+        margin-left: -2px;
+}
+
+.ie8 #content div ul li fieldset input[type='radio'].checked + label {
+	color: rgb(65, 64, 66);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D6D6D6', endColorstr='#9E9E9E'); /* for IE */
+}
+
+.ie8 #content div ul li fieldset + label + span input[type='radio'].checked + label {
+        color: rgb(65, 64, 66);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D6D6D6', endColorstr='#9E9E9E'); /* for IE */
+}
+
+.ie8 #status fieldset input[type='radio'].checked + label {
+        color: rgb(65, 64, 66);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D6D6D6', endColorstr='#9E9E9E'); /* for IE */
+}

@@ -1,0 +1,17 @@
+<h4>{langs.cartDeleteDialogTitle} <div class="close"></div></h4>
+<form method='post' action='/gift/removeFromCart'>
+<ul>
+    <li>{langs.cartDeleteDialogText}</li>
+    <li class="buttons">
+
+      <input type="hidden" name="messageGuid" value="{guid}" />
+
+      <label class="buttonLabel cancel">
+        <input type="submit" value="{langs.cartDeleteDialogCancel}" />
+      </label>
+      <label class="buttonLabel">
+        <input type="submit" value="{langs.cartDeleteDialogDelete}" />
+      </label>
+    </li>
+</ul>
+</form>

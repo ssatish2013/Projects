@@ -1,0 +1,210 @@
+body{
+	overflow-x: hidden;	
+}
+.overlaylit {
+	visibility: hidden;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width:100%;
+	height:100%;
+	z-index: 1000;
+}
+.overlay {
+	visibility: hidden;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width:100%;
+	height:100%;
+	z-index: 1000;
+	background: url("//gca-common.s3.amazonaws.com/assets/background-trans2.png") repeat scroll 0% 0%;
+}
+.overlay > div {
+	width: 600px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.overlay > div > span{
+	cursor: pointer;
+	display: block;
+	float: right;
+	clear: both;
+	width: 78px;
+	height: 26px;
+	background: url("//gca-common.s3.amazonaws.com/assets/dialog_close.png") no-repeat 0px 1px;
+	padding: 0;
+	text-align: left;
+	font-size: 9px;
+	font-weight: 600;
+}
+.overlay > div > span a{
+	margin: 9px 0 0 9px;
+	display: block;
+	color: #303030;
+}
+.overlay > div > div {
+	 float: right;
+	 width: 600px;
+	 background-color: #ffffff;
+	 text-align: left;
+}
+.dialogheader{
+	float: right;
+	height: 40px;
+	text-transform: uppercase;
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+}
+.dialogheader a{
+	margin: 8px 0 0 20px;
+	display: block;
+}
+.dialogcontent{
+	height: 300px;
+	overflow: auto;
+}
+.dialogfooter{
+	float: right;
+	background-color: #F9F9F9 !important;
+	border-bottom: 1px solid #DDDDDD;
+	border-top: 1px solid #DDDDDD;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.dialogfooter input[type="button"], .dialogfooter input[type="submit"], .dialogfooter button {
+	cursor: pointer;
+	display: block;
+	height: 34px;
+	width: 100px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	font-weight: 700;
+	font-size: 13px;
+	padding-bottom: 2px;
+	float: right;
+	margin-right: 20px;
+	border: 1px solid #C51B00;
+	color: #FFFFFF;
+	background: #E41E00; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CB1D00', endColorstr='#E41E00'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#CB1D00), to(#E41E00)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #CB1D00,  #E41E00); /* for firefox 3.6+ */ 
+	text-shadow: 1px 1px #921400;
+}
+.dialogfooter input:hover {
+	background: #CB1D00; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E41E00', endColorstr='#CB1D00'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#E41E00), to(#CB1D00)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #E41E00,  #CB1D00); /* for firefox 3.6+ */ 	
+}
+.dialogfooter a{
+	border: 1px solid #BDBDBD;
+	color: #414042;
+	background: #D6D6D6; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EDEDED', endColorstr='#D6D6D6'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#D6D6D6)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #EDEDED,  #D6D6D6); /* for firefox 3.6+ */ 
+	float: left;
+	margin-left: 20px;
+	height: 32px;
+	width: 100px;
+	display: block;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	font-weight: 700;
+	font-size: 13px;
+	padding-bottom: 2px;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 13px;
+}
+.dialogfooter a:hover{
+	background: #EDEDED; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D6D6D6', endColorstr='#EDEDED'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#D6D6D6), to(#EDEDED)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #D6D6D6,  #EDEDED); /* for firefox 3.6+ */ 
+}
+.dialogfooter a span{
+	display: block;
+	margin-top: 9px;
+	text-align: center;
+}
+.dialogcontent iframe{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border: none;
+}
+
+.dialogcontent p {
+	margin: 16px;
+}
+
+.ui-widget {
+	font-size: 0.9em;
+}
+.ui-widget-header{
+	background: none;
+	border: none;
+}
+.ui-datepicker-inline{
+	border: none;
+}
+.ui-datepicker-inline button.ui-datepicker-current{
+	margin-left: 65px;
+}
+.calendardiv{
+	padding: 0 10px 0 10px;
+	background-color: white;
+	border-top: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	width:250px;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	box-shadow: 0px 0px 10px #000000;
+	-webkit-box-shadow: 0px 0px 10px #000000;
+	-moz-box-shadow: 0px 0px 10px #000000;
+	filter: progid:DXImageTransform.Microsoft.dropShadow(color=#000000, offX=0, offY=0, positive=true);
+	z-index: 1500;
+}
+.calendarheader {
+	border-bottom: 1px solid #DDDDDD;
+	width:230px;
+	height: 15px;
+	padding: 10px;
+	z-index: 1001;
+}
+.calendarheader span{
+	font-weight:bold;
+	font-size: 1.1em;
+	color: #404040;
+}
+.calendarheader img{
+	display:block;
+	float: right;
+	width:21px;
+	height:21px;
+	cursor: pointer;
+	background: url("//gca-common.s3.amazonaws.com/assets/calendar_close.png") no-repeat scroll center center transparent;
+}
+.calendartri{
+	display:block;
+	width: 38px;
+	height: 51px;
+	z-index: 2000;
+}
+.mdialog {
+	
+}
+.mdialog p {
+	text-align: center;
+	margin: 16px;
+}
+.dialog {
+	display: none;
+}

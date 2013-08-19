@@ -1,0 +1,3288 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body { 
+	background-color: #FFFFFF;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	/*-moz-user-select: none;*/
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+	font-family: Arial, Helvetica, "Times New Roman", "Courier New";
+}
+time {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+input:focus, textarea:focus, select:focus {
+	outline: none;
+	border-color: #a0a0a0 #b2b2b2 #b2b2b2 #a0a0a0 !important;
+	border-style: solid !important;
+	border-width:1px !important;
+	box-shadow: 0 1px 0 0 #e6e6e6 inset !important;
+	-moz-box-shadow:    0 1px 0 0 #e6e6e6 inset !important;
+	-webkit-box-shadow: 0 1px 0 0 #e6e6e6 inset !important;
+	color:#666 !important;
+	background-color: #f9f9f9;
+}
+span.error{
+	position:absolute;
+	color:#C00;
+	font-weight:bold;
+	font-size:12px;
+	margin-top:2px;
+}
+.creategift span.error{
+	position:absolute;
+}
+
+fieldset.date + span.error{
+	margin-top:10px;
+}
+
+li.time{
+	margin-top: 15px;
+}
+
+#amounterror span.error{
+	top: 0;
+	left: 560px;
+}
+
+.clear {
+	clear: both !important;
+}
+.postalonly {
+	color: #414042;
+	font-weight: 600;
+	font-size: 12px;
+}
+.hidden {
+	overflow: hidden;
+}
+input.error, textarea.error{
+	border-color:#c00 !important;
+	box-shadow: 0 1px 0 0 #CAA inset !important;
+	-moz-box-shadow:    0 1px 0 0 #CAA inset !important;
+	-webkit-box-shadow: 0 1px 0 0 #CAA inset !important;
+	background-color: #f9f9f9;
+}
+input.error:focus, textarea.error:focus{
+	border-color:#c00 !important;
+	box-shadow: 0 1px 0 0 #CAA inset !important;
+	-moz-box-shadow:    0 1px 0 0 #CAA inset !important;
+	-webkit-box-shadow: 0 1px 0 0 #CAA inset !important;
+	background-color: #f9f9f9;
+}
+.tabalign {
+	margin-top: -15px;
+}
+input[type="text"], textarea, input[type="password"] {
+	font-size: 12px;
+	-webkit-touch-callout: all !important;
+	-webkit-user-select: all !important;
+	-khtml-user-select: all !important;
+	/*-moz-user-select: all !important;*/
+	-ms-user-select: all !important;
+	user-select: all !important;
+	cursor: text;
+	background: #F9F9F9;
+}
+input[type="text"] {
+	line-height: 30px\0/ !important;
+}
+input[type="button"], input[type="submit"], button {
+	cursor: pointer;
+}
+.select {
+	width: 325px;
+	height: 26px;
+	overflow: hidden;
+	border: 1px solid #A0A0A0;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	background: #9E9E9E; /* for non-css3 browsers */
+	color: #414042;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D6D6D6', endColorstr='#9E9E9E'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#D6D6D6), to(#9E9E9E)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #D6D6D6,  #9E9E9E); /* for firefox 3.6+ */
+}
+.select:active {
+	background: #D6D6D6; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9E9E9E', endColorstr='#D6D6D6'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#9E9E9E), to(#D6D6D6)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #9E9E9E,  #D6D6D6); /* for firefox 3.6+ */
+}
+.select select {
+	-webkit-appearance: none;
+	background: none repeat scroll 0 0 transparent;
+	height: 26px;
+	padding: 5px;
+	width: 350px;
+	position: relative;
+	top: -27px;
+	font-size: 12px;
+	font-weight: 700;
+	color: #414042;
+	border: 0px;
+}
+.select span {
+	padding-top: 0;
+	display: block;
+	position: relative;
+	float: right;
+	width: 32px;
+	height: 26px;
+	background-image: url(//gca-common.s3.amazonaws.com/assets/select.arrow.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+img {
+	border: none;
+}
+li {
+	list-style-type: none;
+}
+#adcontainer {
+	background-color: #e6e6e6;
+	margin-bottom: 32px;
+	margin-top: -14px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+#adcontainer #birthdays {
+	background: #ffffff;
+	border: 1px solid #d9d9d9;
+	padding: 16px;
+	margin: 0 auto;
+	width: 720px;
+}
+#adcontainer #birthdays li {
+	display: inline-block;
+	width: 210px;
+	margin: 4px 12px;
+	text-align: left;
+	font-size: 14px;
+}
+#adcontainer #birthdays li img {
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin-right: 8px;
+}
+#adcontainer #birthdays li span {
+	display: block;
+}
+#adcontainer #birthdays li span.name {
+	margin-top: 6px;
+	margin-bottom: 2px;
+}
+#adcontainer #birthdays li span.birthdate {
+	font-size: 12px;
+	color: #666;
+}
+#adcontainer #birthdays li a {
+	color: #000;
+	display: block;
+	overflow: hidden;
+	padding: 6px;
+	text-decoration: none;
+	border: 1px solid #fff;
+}
+#adcontainer #birthdays li a:hover {
+	border: 1px solid #666;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#adcontainer #birthdays li a:hover span.name {
+	text-decoration: underline;
+}
+#cart #messages table {
+	clear: both;
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 12px;
+	margin-left: 20px;
+	line-height: 18px;
+}
+#cart #messages table thead tr th {
+	padding-left: 5px;
+	padding-right: 5px;
+	vertical-align: bottom;
+	padding-bottom: 5px;
+}
+#cart #messages table thead tr th {
+	font-weight: 700;
+}
+#cart #messages table tbody tr td {
+	border: 1px solid #ECECEC;
+	overflow: hidden;
+	text-overflow: ellipses;
+	padding: 10px;
+	vertical-align: top;
+}
+#cart #messages table tbody tr td label {
+	font-weight: 700;
+	display: block;
+	float: left;
+	clear: left;
+	padding-right: 5px;
+}
+#cart #messages table tbody tr td strong {
+	font-weight: 400;
+	display: block;
+	float: left;
+	clear: right;
+}
+#cart #messages table tbody tr td.amount strong {
+	float: right;
+	font-size: 14px;
+	font-weight: 700;
+}
+#cart #messages table tbody tr td.terms a {
+	display: block;
+	clear: both;
+	color: #E21E00;
+	text-decoration: underline;
+}
+#cart #messages table tbody tr td.empty {
+	text-align: center;
+}
+#cart #messages table tbody tr td.empty a {
+	color: #E21E00;
+	text-decoration: underline;
+}
+#cart #messages table tbody tr td div.btnBlock a.button { 
+	width: 100px;
+	margin-top: 5px;
+}
+#cart #messages table tbody tr td div.btnBlock span { 
+	display: block;
+	float: left;
+}
+#cart #messages table tbody tr td div.btnBlock a.update { 
+	color: #999999;
+}
+#cart #messages table tbody tr td div.btnBlock:hover a.update { 
+	color: #333333;
+}
+#cart #messages table tbody tr td div.btnBlock span.img { 
+	background: url(//gca-common.s3.amazonaws.com/assets/btn.icons.png);
+	background-repeat: no-repeat;
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 15px;
+	height: 15px;
+}
+#cart #messages table tbody tr td div.btnBlock span.lbl { 
+	margin-top: 4px;
+}
+#cart #messages table tbody tr td div.edit:hover span.img { 
+	background-position: 0px -15px;
+}
+#cart #messages table tbody tr td div.edit span.img { 
+	background-position: 0px 0px;
+}
+#cart #messages table tbody tr td div.remove:hover span.img { 
+	background-position: -15px -15px;
+}
+#cart #messages table tbody tr td div.remove span.img { 
+	background-position: -15px 0px;
+}
+#cart #messages table tbody tr td div.btnBlock span.lbl { 
+	margin-left: 3px;
+}
+#cart #messages table tbody tr td.amount, #cart #messages table tbody tr td.remove {
+	background: #F9F9F9;
+}
+#cart #messages table tbody tr td.amount, #cart #messages table tbody tr td.description {
+	border-bottom: 0px;
+	max-width: 213px;
+}
+#cart #messages table tbody tr td.remove, #cart #messages table tbody tr td.terms {
+	padding-top: 0px;
+	vertical-align: middle;
+	border-top: 0px;
+}
+#cart #messages table tr td.amount, #cart #messages table tr th.amount {
+	text-align: right;
+}
+#cart #messages table tfoot tr {
+	background-color: #F9F9F9;
+	border-left: 1px solid #E8E8E8;
+	border-right: 1px solid #E8E8E8;
+	border-bottom: 1px solid #E8E8E8;
+}
+#cart #messages table tfoot tr td {
+	padding: 10px;
+	vertical-align: middle;
+}
+#cart #messages table tfoot tr td.amount {
+	font-size: 14px;
+	font-weight: 700;
+}
+#cart #messages table tfoot tr td.amount label {
+	display: block;
+	float: right;
+}
+#cart #messages table tfoot tr td.amount span {
+	display: block;
+	float: right;
+	width: 90px;
+	color: #E21E00;
+}
+#cart #messages table img {
+	width: 110px;
+	height: 70px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-khtml-border-radius: 6px;
+}
+.column {
+	min-width: 780px;
+	text-align: center;
+}
+#header {
+	display: block;
+	width: 100%;
+	height: 140px;
+	overflow: hidden;
+}
+#header #logo {
+	display: block;
+	clear: none;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	width: 780px;
+	height: 140px;
+}
+#header #logo img {
+	position: relative;
+	left: 20px;
+	top: 15px;
+	width: 120px;
+	height: 80px;
+}
+#header #social {
+	font-size: 12px;
+	display: block;
+	clear: none;
+	float: left;
+	width: 100%;
+	height: 32px;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.8);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#000000,endColorstr=#000000);
+}
+#header #social ul {
+	width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	display: block;
+	clear: both;
+}
+#header #social ul li {
+	margin-right: 8px;
+	padding-right: 8px;
+	height: 32px;
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.separator.png) right center no-repeat;
+	display: block;
+	float: left;
+	clear: right;
+}
+#header #social ul li a {
+	display: block;
+	position: relative;
+	top: 5px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+#header #social ul li a img {
+	display: block;
+	width: 22px;
+	height: 22px;
+}
+#header #social a.facebook img {
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.facebook.png) center center no-repeat;
+}
+#header #social a.twitter img {
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.twitter.png) center center no-repeat;
+}
+#header #social a.pinterest img {
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.pinterest.png) center center no-repeat;
+}
+#header #social a.googleplus img {
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.googleplus.png) center center no-repeat;
+}
+#header #social li.right {
+	margin-right: 12px;
+	padding-right: 12px;
+	margin-left: 0px;
+	padding-left: 0px;
+	background: none;
+	float: right;
+	clear: none;
+	text-transform: uppercase;
+}
+#header #social li.right a {
+	top: 8px;
+}
+#header #social li.right a:active {
+	border-bottom: 1px solid #FFFFFF;
+}
+#design {
+	display: block;
+	width: 100%;
+	height: 250px;
+	background-image: url(//gca-common.s3.amazonaws.com/assets/shadow.design.top.png), url(//gca-common.s3.amazonaws.com/assets/shadow.design.bottom.png);
+	background-position: top left, bottom left;
+	background-repeat: repeat-x, repeat-x;
+}
+#design #card {
+	position: relative;
+	text-align: left;
+	width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#design > #card > img {
+	background: url(//gca-common.s3.amazonaws.com/assets/card.default.png) center center no-repeat;
+	display: block;
+	clear: none;
+	float: left;
+	position: relative;
+	margin-left: 140px;
+	top: 40px;
+	width: 260px;
+	height: 170px;
+	box-shadow: 0 0 6px #343434;
+	-moz-box-shadow:    0 0 6px #343434;
+	-webkit-box-shadow: 0 0 6px #343434;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+#design > #card > fieldset.cart, #header > #card > fieldset.cart{
+	font-size: 17px;
+	font-weight: 700;
+	border: none;
+	position: absolute;
+	right: 0px;
+	display: block;
+	width: 120px;
+	height: 32px;
+	border-top: 1px solid #D7D7D7;
+}
+#design > #card > fieldset.cart a, #header > #card > fieldset.cart a {
+	color: #A9A9A9;
+	text-shadow: 1px 0px #F0F0F0;
+}
+#design > #card > fieldset.cart a.cartTitle, #design > #card > fieldset.cart a.cartQty,#header > #card > fieldset.cart a.cartTitle, #header > #card > fieldset.cart a.cartQty {
+	display: block;
+	position: absolute;
+	top: 0px;
+	height: 32px;
+}
+#design > #card > fieldset.cart a.cartTitle, #design > #card > fieldset.cart a.cartQty ,#header > #card > fieldset.cart a.cartTitle, #header > #card > fieldset.cart a.cartQty{
+	background: #E0E0E0;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F4F4F4', endColorstr='#E0E0E0'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#F4F4F4), to(#E0E0E0)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #F4F4F4,  #E0E0E0); /* for firefox 3.6+ */
+}
+#design > #card > fieldset.cart:active a.cartTitle, #design > #card > fieldset.cart:active a.cartQty,#header > #card > fieldset.cart:active a.cartTitle, #header > #card > fieldset.cart:active a.cartQty {
+	background: #F4F4F4;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E0E0E0', endColorstr='#F4F4F4'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#E0E0E0), to(#F4F4F4)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #E0E0E0,  #F4F4F4); /* for firefox 3.6+ */
+}
+#design > #card > fieldset.cart a.cartTitle,#header > #card > fieldset.cart a.cartTitle {
+	left: 0px;
+	width: 90px;
+	border-left: 1px solid #D7D7D7;
+	border-bottom: 1px solid #D7D7D7;
+	border-right: 1px solid #D4D4D4;
+	border-bottom-left-radius: 6px;
+	-moz-border-bottom-left-radius: 6px;
+}
+#design > #card > fieldset.cart a.cartTitle span, #header > #card > fieldset.cart a.cartTitle span {
+	position: relative;
+	top: 6px;
+	text-align: right;
+}
+#design > #card > fieldset.cart a.cartTitle img,#header > #card > fieldset.cart a.cartTitle img {
+	display: block;
+	float: left;
+	clear: none;
+	width: 32px;
+	height: 32px;
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.cart.png) 8px center no-repeat;
+	padding-right: 10px;
+}
+#design > #card > fieldset.cart a.cartQty,#header > #card > fieldset.cart a.cartQty {
+	right: 0px;
+	width: 30px;
+	border-left: 1px solid #D4D4D4;
+	border-right: 1px solid #D7D7D7;
+	border-bottom: 1px solid #D7D7D7;
+	border-bottom-right-radius: 6px;
+	-moz-border-bottom-right-radius: 6px;
+}
+#design > #card > fieldset.cart a.cartQty span,#header > #card > fieldset.cart a.cartQty span {
+	display: block;
+	width: 100%;
+	position: relative;
+	top: 6px;
+	text-align: center;
+}
+#design #card ul {
+	display: block;
+	clear: none;
+	float: left;
+	position: relative;
+	top: 40px;
+	margin-left: 40px;
+}
+#design #card ul li {
+	text-shadow: 1px 1px #4B93A9;
+	color: #80B4C5;
+	font-size: 24px;
+	clear: both;
+	display: block;
+	padding-bottom: 15px;
+}
+#design #card ul li.amount {
+	text-shadow: 1px 1px #2F4C57;
+	font-size: 36px;
+	color: #80B4C5;
+	font-weight: 700;
+}
+#design #card ul li label {
+	display: block;
+	float: left;
+	padding-right: 10px;
+}
+#design #card ul li span#cardTitle, #design #card ul li span#cardFrom {
+	display: block;
+	clear: none;
+	float: left;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding-bottom: 15px;
+	white-space: nowrap;
+}
+#design #card ul li span#cardTitle {
+	width: 300px;
+}
+#design #card ul li span#cardFrom {
+	width: 200px;
+}
+#design.tile #card ul li {
+	text-shadow: none;
+	color: #FFFFFF;
+}
+#design.tile #card ul li span#cardTitle {
+	font-size: 30px;
+	letter-spacing: .03em;
+}
+#design.tile #card ul li span#cardFrom, #design.tile #card ul li label {
+	font-size: 16px;
+}
+#design.tile #card ul li label {
+	font-weight: bold;
+	padding-right: 5px;
+}
+#design.tile #card ul li.amount span#symbolAndAmount {
+	padding: 8px 8px 8px 10px;
+	font-size: 24px;
+	font-weight: normal;
+	background-color: #FFFFFF;
+	background-color: rgba(255, 255, 255, 0.6);
+	color: #36528F;
+}
+#progress div, #barcode div, #status div {
+	position: relative;
+	display: block;
+	clear: both;
+	width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+#progress div {
+	height: 57px;
+}
+#status {
+	border-top: 1px solid #CFCFCF;
+	background: url(//gca-common.s3.amazonaws.com/assets/shadow.design.top.png) top left repeat-x;
+}
+#status div {
+	height: 75px;
+}
+#status fieldset{
+	color: #A0A0A0;
+	border: none;
+	height: 32px;
+	margin-bottom: 10px;
+	margin-left: -15px;
+	display:inline-block;
+}
+#status fieldset input[type="radio"] {
+	display: block\0/ !important;
+	clear: none;
+	position:absolute;
+	z-index: -1;
+}
+#status fieldset input[type="radio"]:focus:checked + label {
+	text-decoration:underline;
+}
+
+input[type="radio"].hidden {
+	display:none;
+}
+#status fieldset input[type="radio"]:checked + label{
+	color:#414042 !important;
+	background: #333333;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333CC', endColorstr='#33333366'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#D6D6D6), to(#9E9E9E)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  rgba(#D6D6D6),  rgba(#9E9E9E)); /* for firefox 3.6+ */
+	border: 1px solid #AAA;
+}
+#status fieldset input[type="radio"]:focus + label{
+	text-decoration: underline;
+}
+#status fieldset label{
+	font-size:16px !important;
+	top:16px !important;
+	margin: 0 4px;
+	text-shadow:none;
+	font-weight: 600 !important;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	width:55px;
+	display: block;
+	float: left;
+	height: 24px;
+	border: 1px solid #AAAAAA;
+	text-align: center;
+	color: #7E7E7E;
+	padding-top: 3px;
+	line-height:21px;
+	font-size: 13px;
+	font-weight: 700;
+	background: #D6D6D6; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E6E6E6', endColorstr='#D6D6D6'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), to(#D6D6D6)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #E6E6E6,  #D6D6D6); /* for firefox 3.6+ */
+}
+#barcode div {
+	height: 115px;
+}
+#progress div img.left, #progress div img.right, #barcode div img.left, #barcode div img.right, #status div img.left, #status div img.right {
+	position: absolute;
+	display: block;
+	clear: none;
+	width: 15px;
+	height: 15px;
+}
+#progress div img.left, #barcode div img.left, #status div img.left {
+	bottom: 0px;
+	left: 0px;
+	background: url(//gca-common.s3.amazonaws.com/assets/corner.left.png) center center no-repeat;
+}
+#progress div img.right, #barcode div img.right, #status div img.right {
+	bottom: 0px;
+	right: 0px;
+	background: url(//gca-common.s3.amazonaws.com/assets/corner.right.png) center center no-repeat;
+}
+#progress ul, #barcode ul, #status ul {
+	display: block;
+	clear: none;
+	width: 780px;
+	position: absolute;
+	border-bottom: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	background: #F9F9F9;
+	top: 0px;
+	left: 0px;
+}
+#progress ul {
+	height: 42px;
+}
+#status ul {
+	height: 60px;
+}
+#barcode ul {
+	height: 100px;
+}
+#progress ul li, #barcode ul li, #status ul li {
+	float: left;
+	clear: right;
+	padding-left: 35px;
+	padding-right: 35px;
+	font-weight: 700;
+	color: #D9D9D9;
+	text-transform: uppercase;
+	height: 100%;
+}
+#barcode ul li, #status ul li {
+	text-shadow: 1px 1px #BFBEBF;
+}
+#status.invitee ul li label {
+	font-size:16px;
+}
+#status.invitee ul li {
+	text-transform:none;
+	font-weight:normal;
+}
+#status.invitee label.amount{
+	float:right;
+}
+#progress ul li, #status ul li {
+	border-right: 1px solid #CCCCCC;
+}
+#barcode ul li {
+	width: 50%;
+}
+#progress ul li.active, #barcode ul li.active, #status ul li.active {
+	color: #FFFFFF;
+	text-shadow: 1px 1px #000000;
+}
+#status ul li.active {
+	width: 710px;
+}
+#progress ul li.active, #status ul li.active {
+	background: #E11E00; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#A61800,endColorstr=#E11E00);
+	background: -webkit-gradient(linear, left top, left bottom, from(#A61800), to(#E11E00)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #A61800,  #E11E00); /* for firefox 3.6+ */
+	border-right: 1px solid #A61800;
+}
+#barcode ul li.active {
+	width: 30%;
+	float: right;
+	background: #1F1F1F; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#1E1E1E,endColorstr=#1F1F1F);
+	background: -webkit-gradient(linear, left top, left bottom, from(#1E1E1E), to(#1F1F1F)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #1E1E1E,  #1F1F1F); /* for firefox 3.6+ */
+	border-left: 1px solid #1E1E1E;
+}
+#progress ul li label, #status ul li label {
+	position: relative;
+}
+#progress ul li label {
+	top: 5px;
+	font-size: 26px;
+	font-weight: normal;
+	text-shadow: -1px 0 #bfbebf, 1px 0 #bfbebf, 0 1px #bfbebf, 0 -1px #bfbebf;
+	background: url(//gca-common.s3.amazonaws.com/assets/progress.steps.png);
+	background-repeat: no-repeat;
+	display: block;
+	color: #e0e0e0;
+	width: 25px;
+	height: 25px;
+	float: left;
+	white-space: nowrap;
+}
+
+#progress ul .active label {
+	top: 5px;
+	font-size: 26px;
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow: 1px 1px #000000;
+}
+
+#progress ul li label.one { 
+	background-position: 0px -32px;
+}
+
+#progress ul .active label.one { 
+	background-position: 0px 0px;
+}
+
+#progress ul li label.othtwo { 
+	background-position: -29px -32px;
+	margin-top: 1px;
+}
+
+#progress ul .active label.othtwo { 
+	background-position: -29px 0px;
+	margin-top: 1px;
+}
+
+#progress ul li label.grptwo { 
+	background-position: -116px -32px;
+	margin-top: 1px;
+}
+
+#progress ul .active label.grptwo {
+	background-position: -116px 0px;
+	margin-top: 3px;
+}
+
+
+#progress ul li label.three { 
+	background-position: -58px -32px;
+	margin-top: 1px;
+}
+
+#progress ul .active label.three { 
+	background-position: -58px 0px;
+	margin-top: 4px;
+}
+
+#progress ul li label.four { 
+	background-position: -87px -32px;
+	margin-top: 2px;
+}
+
+#progress ul .active label.four { 
+	background-position: -87px 0px;
+	margin-top: 2px;
+}
+
+#status:not(.invitee) ul li label {
+	display: block;
+	height: 58px;
+	line-height: 58px;
+	font-size: 18px;
+}
+
+/* IE8 Hack*/
+@media \0screen {
+	#status ul li label {
+	display: block;
+	height: 58px;
+	line-height: 58px;
+	font-size: 18px;
+	}
+	#status.invitee ul li label {
+	top: 15px !important;
+	display: inline !important;
+	height: 24px !important;
+	line-height: 24px !important;
+	font-size: 16px !important;
+	}
+}
+#status.invitee ul li label {
+	top: 4px;
+}
+
+#progress ul li span {
+	display: none;
+	margin-left: 10px;
+	font-size: 15px;
+	position: relative;
+	top: 2px;
+	letter-spacing: 1px;
+}
+#progress ul li.active span {
+	display: block;
+	white-space: nowrap;
+	float: left;
+	margin-top: 11px;
+}
+#progress label.required {
+	position: relative;
+	top: 15px;
+	color: #AFAFAF;
+	display: block;
+	float: right;
+	margin-right: 20px;
+	font-size: 12px;
+	font-weight: bold;
+}
+#progress label.required span {
+	position: relative;
+	color: #E51E00;
+	padding-right: 4px;
+}
+#barcode label {
+	font-size: 20px;
+	padding-top: 35px;
+	display: block;
+	clear: both;
+	width: 100%;
+	text-align: center;
+}
+#barcode ul li.active label {
+	font-size: 14px;
+	padding-top: 25px;
+	text-align: left;
+	text-transform: none;
+}
+#barcode ul li.active span {
+	display: block;
+	font-size: 20px;
+	padding-top: 6px;
+}
+#content, #navigation, #products, #claim, #cart, #invitee {
+	clear: both;
+}
+#content > div, #navigation > div, #products > div, #claim > div, #cart > div,
+#invite > div, #invitee > div, #messages > div, #billing > div, #payments > div {
+	text-align: left;
+	display: block;
+	position: relative;
+	width: 750px;
+	top: -14px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	background: #FFFFFF;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	overflow: auto;
+	font-size: 14px;
+}
+#invite > div { 
+	background: #FFFFFF url(//gca-common.s3.amazonaws.com/assets/arrow.right.png) center 35% no-repeat;
+	overflow: hidden;
+}
+#navigation > div {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #F9F9F9;
+	border-top: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	width: 750px;
+}
+#content > div a.edit {
+	font-size: 14px;
+	font-weight: 700;
+	color: #D61D00;
+	display: block;
+	float: right;
+	clear: none;
+	padding-top: 20px;
+	padding-right: 30px;
+}
+#content > div a.edit img {
+	display: block;
+	position: relative;
+	top: -7px;
+	float: left;
+	width: 32px;
+	height: 32px;
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.edit.png) center center no-repeat;
+	padding-right: 10px;
+}
+#content div ul, #cart div ul, #billing ul, #payments ul {
+	position: relative;
+	display: block;
+	float: left;
+	clear: right;
+	margin-bottom: 5px;
+}
+#billing #billingform ul,
+#billing #paymentmethod ul,
+#payments #paymentmethod ul,
+#billing #creditcardform ul,
+#content ul {
+	width: 50%;
+}
+#billing #billingform #billingzip { font-size: 11px; }
+#billing #paymentmethod ul.invisible,
+#payments #paymentmethod ul.invisible {
+	visibility: hidden;
+}
+#content div ul li, #invitee div ul li {
+	display: block;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+#content div ul li, #cart div ul li, #billing ul li, #payments ul li {
+	display: block;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+#content div ul li#cardAmountError {
+	clear: both;
+}
+#content div ul li.morePadding {
+	padding-top: 80px;
+}
+#content div ul li span.required, #invite ul li span.required,
+#invitee div ul li span.required, #billing ul li span.required,
+.thankyouform ul li span.required {
+	position: relative;
+	left: -10px;
+	display: block;
+	width: 5px;
+	height: 5px;
+	color: #F00;
+	clear: none;
+	float: left;
+	font-weight: 700;
+}
+#content div ul li > label, #invite ul li > label, #invitee div ul li > label,
+#billing ul li > label, #payments ul li > label, .thankyouform ul li > label {
+	color: #414042;
+	width: 80%;
+	display: block;
+	float: left;
+	clear: right;
+	padding-bottom: 8px;
+	font-size: 12px;
+	font-weight: 700;
+}
+#content div ul li > div {
+	color: #414042;
+	width: 99%;
+	clear: right;
+	font-size: 12px;
+	font-weight: 700;
+}
+#content div ul li > label a.help, #billing a.help,
+#inviteBlock div ul li > span a.help { 
+	padding-left: 6px;
+	position: absolute;
+	margin-top: -2px;
+}
+#payments a.help { 
+	padding-left: 6px;
+	position: absolute;
+	margin-top: 1px;
+	margin-left: -16px;
+}
+#inviteBlock div ul li > span {
+	position: absolute;
+}
+#inviteBlock div ul li > span a.help {
+	float: right;
+	position: relative;
+	top: 8px;
+	right: 30px;
+}
+#content div ul li > label a.help img, #billing a.help img, #payments a.help img,
+#status.invitee a.help img, #inviteBlock div.half ul li > span a.help img {
+	width: 16px;
+	height: 16px;
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.help.png) center center no-repeat;
+}
+#content div ul li span.required + label, #billing ul li span.required + label,
+#payments ul li span.required + label {
+	position: relative;
+	left: -5px;
+}
+#content div ul li label + span, #content div ul li.address label + span > div, #billing ul li label + span,
+#payments ul li label + span {
+	color: #545455;
+	display: block;
+	float: none;
+	clear: both;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#content div ul li label + span + div {
+	width: 100%;
+}
+#billing ul li label + span, #payments ul li label + span {
+	width: 100%;
+}
+#content div ul li label + span.message, #billing ul li label + span.message,
+#payments ul li label + span.message {
+	overflow: visible;
+	white-space: pre-line;
+	text-overflow: string;
+	word-wrap: break-word;
+	line-height: 1.5em;
+}
+#content div ul li a.button, #content div ul li a.play, #content div ul li a.playBig, #invitee div ul li a.button, #invitee div ul li a.play, #invitee div ul li a.playBig, #claim #recipient a.button, #cart #summary a.button, #invite a.button {
+	font-size: 12px;
+	font-weight: 700;
+	display: block;
+	height: 26px;
+	line-height: 26px;
+	clear: right;
+	float: left;
+	margin-bottom: 10px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+#cart div #summary .caption, #messages p { 
+	-webkit-user-select: text;  /* webkit browsers like Chrome and Safari */
+	-moz-user-select: text;     /* Firefox */
+	-ms-user-select: text;      /* IE */
+	-o-user-select: text;	    /* Opera */
+	user-select: text;	    /* defaults to this property */
+}
+#cart div #summary label.caption { 
+	font-weight: normal;
+	font-size: 10px;
+	color: #999999;
+	margin-bottom: 10px;
+}
+#cart div #summary strong.caption { 
+	font-weight: normal;
+	font-size: 10px;
+	color: #999999;
+	margin-bottom: 10px;
+}
+#content div ul li a.button, #content div ul li a.play, #content div ul li a.playBig, #invitee div ul li a.button, #invitee div ul li a.play, #invitee div ul li a.playBig, #cart #summary a.button {
+	border: 1px solid #C9C9C9;
+	color: #414042;
+	background: #9E9E9E; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D8D8D8', endColorstr='#9E9E9E'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#D8D8D8), to(#9E9E9E)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #D8D8D8,  #9E9E9E); /* for firefox 3.6+ */
+}
+#content div ul li a.button:active, #content div ul li a.play:active, #content div ul li a.playBig:active, #cart #summary a.button:active {
+	background: #D8D8D8; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9E9E9E', endColorstr='#D8D8D8'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#9E9E9E), to(#D8D8D8)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #9E9E9E,  #D8D8D8); /* for firefox 3.6+ */
+}
+#inviteBlock div ul li a.button {
+	width: 100%;
+}
+#content div ul li a.button {
+	width: 80%;
+}
+#invitee div ul li a.button {
+	width: 70%;
+}
+#content div ul li a.play, #invitee div ul li a.play {
+	width: 26px;
+	margin-left: -10px;
+}
+#content div ul li a.playBig, #invitee div ul li a.playBig {
+	width: 100%;
+}
+#claim #recipient a.button {
+	width: 90%;
+}
+#cart #summary a.button {
+	width: 100%;
+}
+#invite a.button {
+	width: 103%;
+}
+#claim #recipient a.button span, #cart #summary a.button, #invite a.button span {
+	padding-left: 0px !important;
+	display: block;
+	text-align: center;
+}
+#content div ul li a.play img, #content div ul li a.playBig img,
+#invitee div ul li a.play img, #invitee div ul li a.playBig img {
+	display: block;
+	clear: none;
+	width: 16px;
+	height: 16px;
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.play.png) center center no-repeat;
+}
+#content div ul li a.play img, #invitee div ul li a.play img {
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+#content div ul li a.playBig img {
+	float: right;
+	position: relative;
+	top: 8px;
+	margin-right: 9px;
+}
+#content div ul li a.button span, #content div ul li a.playBig span,#invitee div ul li a.button span, #invitee div ul li a.playBig span, #claim #recipient a.button span, #cart #summary a.button span {
+	position: relative;
+	padding-left: 10px;
+}
+#content div ul li a, #content div ul li a.playBig span, #cart #messages a.button span {
+	color: #000000;
+}
+#content div ul li a.button + a.help, #invitee div ul li a.button + a.help {
+	display: block;
+	clear: none;
+	float: left;
+	position: relative;
+	right: 24px;
+	top: 5px;
+}
+#content div ul li a.button + a.help img, #invitee div ul li a.button + a.help img {
+	width: 16px;
+	height: 16px;
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.help.png) center center no-repeat;
+}
+#content div ul li > input[type="text"],
+#content div ul li > label > input[type="text"],
+#content div ul li > input[type="password"],
+#content div ul li > textarea,
+#claim input[type="text"],
+#claim input[type="password"],
+#claim textarea,
+#invite textarea,
+#invitee input[type="text"],
+#invitee textarea,
+form.voucherSendSms input[type="text"],
+#billing input[type="text"],
+.thankyouform textarea,
+.thankyouform input[type="text"] {
+	display: block;
+	float: right;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	border-color: #a0a0a0 #b2b2b2 #b2b2b2 #a0a0a0;
+	border-style: solid;
+	border-width:1px;
+	box-shadow: 0 1px 0 0 #e6e6e6 inset;
+	-moz-box-shadow:    0 1px 0 0 #e6e6e6 inset;
+	-webkit-box-shadow: 0 1px 0 0 #e6e6e6 inset;
+	background-color: #f9f9f9;
+}
+#status.invitee input[type="text"] {
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	border-color: #a0a0a0 #b2b2b2 #b2b2b2 #a0a0a0;
+	border-style: solid;
+	border-width:1px;
+	box-shadow: 0 1px 0 0 #e6e6e6 inset;
+	-moz-box-shadow:    0 1px 0 0 #e6e6e6 inset;
+	-webkit-box-shadow: 0 1px 0 0 #e6e6e6 inset;
+	background-color: #f9f9f9;
+}
+#content div ul li label + input[type="text"],
+#content div ul li label + input[type="password"],
+#content div ul li label + textarea,
+#content div ul li label + fieldset,
+#invitee div ul li label + input[type="text"],
+#invitee div ul li label + input[type="password"],
+#invitee div ul li label + textarea,
+#invitee div ul li label + fieldset,
+#invite textarea,
+#billing textarea,
+#billing input[type="text"] {
+	float: none;
+	clear: both;
+	width: 96%;
+}
+#invite #inviting textarea {
+	-moz-border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	-moz-border-bottom-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+#invite textarea + fieldset, #invite #invited fieldset {
+	width: 103.2%;
+	height: 24px;
+	border: 1px solid #D0D0D0;
+	border-top: 0px;
+	background: #D6D6D6; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EDEDED', endColorstr='#D6D6D6'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#D6D6D6)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #EDEDED,  #D6D6D6); /* for firefox 3.6+ */
+}
+#invite #invited fieldset {
+	-moz-border-top-left-radius: 6px;
+	border-top-left-radius: 6px;
+	-moz-border-top-right-radius: 6px;
+	border-top-right-radius: 6px;
+}
+#invite textarea + fieldset, #invite #invited fieldset + div {
+	-moz-border-bottom-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	-moz-border-bottom-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	margin-bottom: 10px;
+}
+#invite textarea + fieldset > label, #invite #invited fieldset > label {
+	padding-left: 10px;
+}
+#invite textarea + fieldset > label, #invite #invited fieldset > label, #invite #invited fieldset > span {
+	font-size: 12px;
+	font-weight: 700;
+	position: relative;
+	line-height: 22px;
+	top: 2px;
+}
+#invite #invited fieldset > span {
+	border-left: 1px solid #A0A0A0;
+    float: right;
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 28px;
+}
+#invite #invited fieldset + div {
+	width: 103.2%;
+	height: 302px;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	border: 1px solid #A0A0A0;
+}
+#invite #invited fieldset + div > table {
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 100%;
+}
+#invite #invited fieldset + div > table td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 13px;
+}
+#invite #invited fieldset + div > table td:first-child {
+	padding-left: 8px;
+}
+#invite #invited fieldset + div > table td:last-child {
+	width: 35px;
+}
+#invite #invited fieldset + div > table tr:nth-child(even) {
+	background-color: #EFEFEF;
+}
+#invite #invited fieldset + div > table td > a {
+	color: #E21E00;
+	padding-right: 10px;
+	text-decoration: underline;
+}
+#invite textarea + fieldset > input[type="submit"] {
+	display: block;
+	float: right;
+	clear: right;
+	height: 24px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-bottom-right-radius: 6px;
+	-moz-border-bottom-right-radius: 6px;
+	background: #9D9D9D; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D5D5D5', endColorstr='#9D9D9D'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#D5D5D5), to(#9D9D9D)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #D5D5D5,  #9D9D9D); /* for firefox 3.6+ */
+	border: none;
+	border-left: 1px solid #B5B5B5;
+	font-size: 13px;
+}
+#invite hr {
+	margin-bottom: 20px;
+}
+#invite hr + input[type="checkbox"] + label + hr {
+	margin-top: 20px;
+}
+
+input[type=checkbox].customCheckbox{
+	display:none;
+}
+input[type=checkbox].customCheckbox + label{
+	display: block;
+	clear: both;
+	padding-left: 20px;
+	font-weight: bold;
+	font-size: 12px;
+	color: #414042;
+}
+input[type=checkbox].customCheckbox + label > img {
+	background: url(//gca-common.s3.amazonaws.com/assets/checkbox.inactive.png) center center no-repeat;
+	width: 25px;
+	height: 25px;
+	padding-right: 20px;
+	display: block;
+	float: left;
+	clear: none;
+	position: relative;
+	top: -3px;
+}
+input[type=checkbox].customCheckbox:checked + label > img {
+	background: url(//gca-common.s3.amazonaws.com/assets/checkbox.active.png) center center no-repeat;
+}
+input[type=checkbox].customCheckbox + label > span {
+	position:relative;
+	left: -7px;
+	top: 3px;
+}
+
+
+#invitee #messageFromName,
+#content div ul li input[type="text"],
+#content div ul li input[type="password"],
+#claim input[type="text"],
+#claim input[type="password"],
+form.voucherSendSms input[type="text"],
+#billing input[type="text"],
+#status.invitee input[type="text"],
+.thankyouform input[type="text"] {
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 26px;
+	border-color: #a0a0a0 #b2b2b2 #b2b2b2 #a0a0a0;
+	border-style: solid;
+	border-width:1px;
+	box-shadow: 0 1px 0 0 #e6e6e6 inset;
+	-moz-box-shadow:    0 1px 0 0 #e6e6e6 inset;
+	-webkit-box-shadow: 0 1px 0 0 #e6e6e6 inset;
+	background-color: #f9f9f9;
+	color:#666;
+}
+div.thankyouform > .width1 {
+	width:35px;
+	margin-right: 5px;
+}
+
+div.thankyouform > .width2 {
+        width:auto;
+}
+
+div.thankyouform > .left {
+	float: left;
+}
+
+#content div ul li input.currency, #status.invitee div ul li input.currency {
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 22px;
+	margin-right: 63px;
+}
+#status.invitee div ul li input.currency{
+	margin-right: 0;
+}
+#amounterror{
+	margin-left: 180px;
+}
+#customize #amounterror{
+	margin:0 0 2px 30px;
+}
+#content div ul li input.small, #status.invitee input[type="text"] {
+	width: 115px !important;
+}
+#content div ul li input.xsmall { 
+	width: 78px !important;
+}
+#content div ul li input.medium {
+	width: 130px !important;
+}
+#content div ul li textarea, #invite div ul li textarea, #invitee div ul li textarea,  .thankyouform textarea {
+	padding-left: 5px;
+	padding-right: 5px;
+	font-family: Helvetica, Arial, "Times New Roman", "Courier New";
+	padding-top: 5px;
+	padding-bottom: 5px;
+	height: 120px;
+	resize: none;
+	overflow: auto;
+	background-color:#F9F9F9;
+}
+#content div ul li fieldset {
+	color: #AFAFAF;
+	border: none;
+	height: 32px;
+	margin-bottom: 10px;
+}
+#content div ul li fieldset.date input[type="text"], #content div ul li fieldset.time input[type="text"] {
+	text-align: left;
+	width: 57px;
+	border-color: #a0a0a0 #b2b2b2 #b2b2b2 #a0a0a0;
+	border-style: solid;
+	border-weight: 1px;
+	background-color: #f9f9f9;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-moz-box-shadow:    0 1px 0 0 #e6e6e6 inset;
+	-webkit-box-shadow: 0 1px 0 0 #e6e6e6 inset;
+	box-shadow:         0 1px 0 0 #e6e6e6 inset;
+	color:#666;
+}
+#content div ul li fieldset.date a.calendar {
+	display: block;
+	float: right;
+	width: 32px;
+	height: 32px;
+	position: relative;
+	top: -3px;
+	left: -35px;
+}
+#content div ul li fieldset.date a.calendar img {
+	display: block;
+	width: 32px;
+	height: 32px;
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.calendar.png) center center no-repeat;
+}
+#content div ul li fieldset input[type="radio"] {
+	display: block\0/ !important;
+	clear: none;
+	position:absolute;
+	z-index: -1;
+}
+#content div ul li fieldset input[type="radio"]:checked + label {
+	color: #414042;
+	background: #9E9E9E; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D6D6D6', endColorstr='#9E9E9E'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#D6D6D6), to(#9E9E9E)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #D6D6D6,  #9E9E9E); /* for firefox 3.6+ */
+}
+/* change the colour of the text when the radio buton is in focus */
+#content div ul li fieldset input[type="radio"]:focus + label {
+	text-decoration:underline;
+}
+
+#content div ul li fieldset label {
+	display: block;
+	float: left;
+	clear: right;
+	width: 24%;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #AAAAAA;
+	border-right: none;
+	text-align: center;
+	color: #7E7E7E;
+	font-size: 13px;
+	font-weight: 700;
+	background: #D6D6D6; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E6E6E6', endColorstr='#D6D6D6'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), to(#D6D6D6)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #E6E6E6,  #D6D6D6); /* for firefox 3.6+ */
+}
+#content div ul li fieldset label[for="delivery_instant"] {
+	background: none;
+	color: #414042;
+	border-right: 1px solid #AAAAAA;
+	margin-top: 10px;
+	white-space: nowrap;
+}
+#content div ul li fieldset label.first {
+	-moz-border-top-left-radius: 6px;
+	-moz-border-bottom-left-radius: 6px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+#content div ul li fieldset label.last{
+	-moz-border-top-right-radius: 6px;
+	-moz-border-bottom-right-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border-right: 1px solid #AAAAAA !important;
+}
+#content div ul li fieldset.date.labels {
+	height: 0;
+	margin-bottom: 20px;
+}
+#content div ul li
+fieldset.date.labels label {
+	position: relative;
+	top: -14px;
+	height: 12px;
+	width: 55px;
+	background: #FFFFFF;
+	background: rgba(255,255,255,0) !important;
+	filter: none;
+	border: none !important;
+	text-align: left;
+	margin-right: 26px;
+	font-size: 11px;
+	color: #8b8b8b;
+}
+#content div ul li fieldset.date label.last {
+	border: none !important;
+	margin-right: 0px;
+}
+#content div ul li fieldset + label {
+	display: block;
+	float: right;
+	width: auto;
+}
+#content div ul li fieldset + label.custom { 
+	width: 150px !important;
+	margin-left: 5px !important;
+}
+#content div ul li > label.custom > input[type="text"] { 
+	float: none !important;
+}
+#content div ul li fieldset + label + span {
+	font-size: 12px;
+	position: relative;
+	top: 8px;
+	font-weight: 700;
+	margin-right: 10px;
+	display: block;
+	clear: none;
+	float: left;
+}
+#content div ul li fieldset + label + span.custom { 
+	margin-right: 0px !important;
+}
+#content div ul li fieldset + label + span input[type="radio"] {
+	display: none; // display: block // no script
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+}
+#invitee div #invited{
+	width:35%;
+	float:left;
+	padding-top:80px;
+}
+#invitee div #customize{
+	width:64%;
+	float:right;
+}
+#invitee div #customize ul{
+	margin-right:20px;
+}
+#invitee div #customize li{
+	margin-bottom:20px;
+}
+#invitee div #customize li.boxed{
+	background-color:#f9f9f9;
+	border:1px solid #dddddd;
+	padding: 14px 16px;
+	font-size:14px;
+	width: 82%;
+	color: #404040;
+}
+#invitee div #customize li.boxed h2{
+	font-size:18px;
+	margin-bottom:18px;
+	color: #414042;
+}
+#invitee div #customize li.boxed p{
+	margin-top:10px;
+}
+#invitee div #invited ul{
+	padding: 0 20px;
+}
+#invitee div #invited ul li{
+	font-size: 12px;
+	color: #414042;
+	clear:both;
+	padding: 12px;
+	margin:0;
+	border-left:1px solid #ececec;
+	border-right:1px solid #ececec;
+	border-bottom:1px solid #ececec;
+}
+#invitee div #invited ul li.header{
+	border:1px solid #e4e4e4;
+	font-weight:700;
+	background-color:#cfcfcf;
+	height: 15px;
+	display: block;
+	font-size: 12px;
+	color: #414042;
+}
+#invitee div #invited ul li img {
+	display: inline-block;
+	vertical-align: middle;
+	width: 53px;
+	height: 53px;
+}
+#invitee div #invited ul li img.avatar {
+	margin-right: 12px;
+	border: 1px solid #C8C8C8;
+	background: url(//gca-common.s3.amazonaws.com/assets/avatar.png) center center no-repeat;
+}
+#cart div #messages ul {
+	clear: both;
+}
+#cart div #messages ul li {
+	padding-left: 20px;
+	display: block;
+	float: left;
+	clear: right;
+	width: 200px;
+}
+#cart div #messages ul li h3 {
+	font-size: 14px;
+	font-weight: 700;
+	padding-bottom: 10px;
+	color: #414042;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 200px;
+}
+#cart div #messages ul li img {
+	width: 200px;
+	margin-bottom: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+#cart div #messages ul li a.button {
+	width: 158px;
+}
+#cart div #messages ul li a.button span {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+#claim div #messages, #claim div #recipient, #cart div #messages, #invite div .half {
+	display: block;
+	padding-top: 10px;
+}
+#claim div #messages, #cart div #messages, #invite div .half, #billing #billingform{
+	float: left;
+	clear: none;
+}
+#claim div #messages, #cart div #messages{
+	width: 60%;
+}
+#invite div .half {
+	width: 50%;
+}
+#claim div #messages ul, #invite div ul {
+	padding-left: 20px;
+}
+#claim div #messages ul li, #invite div ul li {
+	display: block;
+	width: 90%;
+	clear: both;
+}
+#claim div #messages ul li {
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+#claim div #messages ul li img {
+	display: block;
+	width: 70px;
+	height: 70px;
+}
+#claim div #messages ul li img.avatar {
+	float: left;
+	clear: right;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	border: 1px solid #C8C8C8;
+	background: url(//gca-common.s3.amazonaws.com/assets/avatar.png) center center no-repeat;
+}
+#claim div #messages ul li a {
+	display: block;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-right: 10px;
+}
+#claim div #messages ul li img.audio {
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.audio.png) center center no-repeat;
+}
+#claim div #messages ul li img.video {
+	width: 110px;
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.video.png) center center no-repeat;
+}
+#claim div #messages ul li label {
+	display: block;
+	margin-bottom: 10px;
+}
+#claim div #messages ul li span {
+	display: block;
+}
+#claim div #recipient {
+	width: 35%;
+	float: right;
+	clear: none;
+	padding-left: 25px;
+	border-left: 1px dashed #EDEDED;
+}
+#messages h1, #messages h2, #invite h1 {
+	color: #E21E00;
+	font-weight: 700;
+	margin-left: 20px;
+}
+#messages h1, #invite h1 {
+	font-size: 22px;
+	padding-bottom: 20px;
+}
+#messages h2 {
+	font-size: 16px;
+	padding-bottom: 10px;
+}
+#messages hr, #invite hr {
+	display: block;
+	clear: both;
+	color: #FFFFFF;
+	background: #FFFFFF;
+	border: none;
+	border-bottom: 1px solid #DDDDDD;
+	margin-left: 20px;
+	height: 1px;
+}
+#messages hr {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+#invite hr {
+	margin-right: 20px;
+}
+#messages p {
+	font-size: 14px;
+	margin-left: 20px;
+	padding-bottom: 20px;
+	color: #414042;
+}
+#billing div #birthdays,
+#payments div #birthdays {
+	display:none;
+	margin-top:20px;
+}
+#cart div #summary,
+#billing div #ordersum,
+#billing div #summary,
+#billing div #birthdays,
+#floatingsummary #ordersum,
+#floatingsummary #summary,
+#floatingsummary #birthdays {
+	float: right;
+	clear: none;
+	padding: 20px;
+	margin-right: 20px;
+	background: #202020;
+	color: #FEFEFE;
+}
+#cart div #summary { 
+	width: 28% !important;
+}
+#billing div #ordersum,
+#billing div #summary,
+#billing div #birthdays,
+#floatingsummary #ordersum,
+#floatingsummary #summary,
+#floatingsummary #birthdays { 
+	width: 25%;
+}
+#billing div #ordersum {
+	padding-bottom: 0;
+}
+#cart div #summary hr,
+#billing div #ordersum hr,
+#billing div #summary hr,
+#billing div #birthdays hr,
+#floatingsummary #ordersum hr,
+#floatingsummary #summary hr,
+#floatingsummary #birthdays hr {
+	width: 100%;
+	height: 1px;
+	display: block;
+	background: #202020;
+	color: #202020;
+	clear: both;
+	border: none;
+	border-bottom: 1px solid #3B3B3B;
+	margin-bottom: 10px;
+}
+#cart div #summary h1,
+#billing div #ordersum h1,
+#billing div #summary h1,
+#billing div #birthdays h1,
+#floatingsummary #ordersum h1,
+#floatingsummary #summary h1,
+#floatingsummary #birthdays h1 {
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+#cart div #summary label,
+#cart div #summary strong,
+#billing div #ordersum ul li,
+#billing div #ordersum label,
+#billing div #ordersum strong,
+#billing div #summary label,
+#billing div #summary strong,
+#billing div #birthdays ul li,
+#floatingsummary #ordersum ul li,
+#floatingsummary #summary label,
+#floatingsummary #summary strong,
+#floatingsummary #birthdays ul li {
+	font-weight: 700;
+	font-size: 12px;
+}
+#cart div #summary label.big,
+#cart div #summary strong.big,
+#billing div #ordersum *.big,
+#billing div #summary *.big,
+#floatingsummary #summary *.big {
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+#cart div #summary label,
+#billing div #ordersum ul li,
+#billing div #ordersum label,
+#billing div #summary label,
+#floatingsummary #ordersum ul li,
+#floatingsummary #summary label {
+	display: block;
+	float: left;
+	clear: left;
+	width: 50%;
+	text-align: left;
+	margin-bottom: 10px;
+}
+#cart div #summary label + strong,
+#billing div #ordersum  label + strong,
+#billing div #summary  label + strong,
+#floatingsummary #summary label + strong {
+	display: block;
+	float: right;
+	clear: right;
+	width: 50%;
+	text-align: right;
+}
+#billing div #ordersum ul li,
+#billing div #birthdays ul li,
+#floatingsummary #ordersum ul li,
+#floatingsummary #birthdays ul li {
+	width: 190px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#billing div #ordersum {
+	margin-bottom: 20px;
+	margin-top: -226px;
+}
+#billing div #ordersum.paypalonly {
+	margin-top: -40px;
+}
+#claim div #recipient h1 {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+#claim div #recipient h2 {
+	display: block;
+	text-align: center;
+	clear: both;
+	background-color: #CFCFCF;
+	border: 1px solid #C0C0C0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-right: 20px;
+	margin-left: 4px;
+	font-size: 14px;
+	font-weight: 700;
+}
+#claim div #recipient ul {
+	padding-right: 20px;
+	margin-bottom: 30px;
+}
+#claim div #recipient ul li {
+	font-size: 14px;
+	background: url(//gca-common.s3.amazonaws.com/assets/icon.check.png) top left no-repeat;
+	padding-left: 25px;
+	padding-top: 2px;
+	margin-bottom: 15px;
+}
+#claim div #recipient form, form.voucherSendSms {
+	display: block;
+	height: 125px;
+	background: #F9F9F9;
+	border: 1px solid #E7E7E7;
+	margin-bottom: 20px;
+	margin-left: 4px;
+	margin-right: 20px;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+form.voucherSendSms {
+	margin: 0;
+	background: none;
+	border: 0;
+	padding-right: 20px;
+}
+#claim div #recipient form label, form.voucherSendSms label {
+	font-size: 14px;
+	font-weight: 700;
+	display: block;
+	float: right;
+	clear: both;
+	width: 90%;
+	text-align: left;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+#claim div #recipient form input, form.voucherSendSms input {
+	float: right;
+	display: block;
+	clear: both;
+	margin-right: 0;
+	margin-bottom: 10px;
+}
+
+#claim div #recipient form#sendSms span.error{
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 58px;
+}
+#claim div #recipient form input[type="text"], form.voucherSendSms input[type="text"] {
+	width: 90%;
+}
+#claim div #recipient form#sendSms input[type="text"]{
+	margin-bottom: 0;
+}
+#claim div #recipient form#sendSms input[type="submit"]{
+	margin-top: 20px;
+}
+#claim div #recipient form#sendSms input[type="submit"]:focus{
+	box-shadow: none !important;
+}
+#claim div #recipient hr {
+	border: none;
+	border-bottom: 1px dashed #EDEDED;
+	background: #FFFFFF;
+	color: #FFFFFF;
+	width: 105%;
+	height: 1px;
+	margin-bottom: 20px;
+	position: relative;
+	right: 25px;
+}
+#products div ul {
+	margin-left: 20px;
+}
+#products div ul li {
+	position: relative;
+	display: block;
+	float: left;
+	clear: right;
+	width: 170px;
+	height: 130px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+#products div ul li label {
+	color: #414042;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	font-size: 12px;
+}
+#products div ul li img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	clear: both;
+	width: 170px;
+	height: 108px;
+	padding:0;
+	margin-bottom: 10px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#products div ul li img.design {
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+#products .designlist li.selected img.design {
+	border-color:#c00;
+}
+
+#products div ul li img.new {
+	width:48px;
+	height:46px;
+	top:1px;
+	left:123px;
+	background: url(//gca-common.s3.amazonaws.com/assets/card.new.png) top right no-repeat;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+	border-radius: 0 5px 0 0;
+}
+#products div ul li img.custom{
+	width:25px;
+	height:25px;
+	top:84px;
+	left:1px;
+	background: url(//gca-common.s3.amazonaws.com/assets/card.custom.png) bottom left no-repeat;
+	-webkit-border-radius: 0 0 0 5px;
+	-moz-border-radius: 0 0 0 5px;
+	border-radius: 0 0 0 5px;
+}
+#products div ul li img.mail{
+	width:25px;
+	height:25px;
+	top:84px;
+	left:146px;
+	background: url(//gca-common.s3.amazonaws.com/assets/card.mail.png) bottom right no-repeat;
+	-webkit-border-radius: 0 0 5px 0;
+	-moz-border-radius: 0 0 5px 0;
+	border-radius: 0 0 5px 0;
+
+}
+
+#ribbon.left{
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+#ribbon div {
+	display: block;
+	text-align: right;
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 0px;
+	overflow: visible;
+}
+#ribbon.left div{
+	text-align:left;
+}
+#ribbon div img {
+	position: relative;
+	top: -95px;
+	right: -15px;
+}
+#ribbon.left div img{
+	position: relative;
+	top:0;
+	right:auto;
+	left:-15px;
+}
+#navigation div input[type="button"], #navigation div input[type="submit"], #navigation div a, #claim input[type="submit"], #cart #messages a.button, .column#messages > div a.button, #invitee input[type="submit"] {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#navigation div input[type="button"], #navigation div a, .column#messages > div a.button {
+	margin-left: 20px;
+}
+#navigation div p {
+	font-size: 10px;
+	color: #999999;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+#cart #messages table a.button, #cart #messages input[type="submit"] {
+	margin-left: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#navigation div input[type="button"], #navigation div input[type="submit"], #navigation div a, #claim input[type="submit"], #cart #messages a.button, #cart #messages input[type="submit"], .column#messages > div a.button, #invite a.button, #invitee input[type="submit"] {
+	display: block;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	font-weight: 700;
+	font-size: 12px;
+}
+#navigation div input[type="button"], #navigation div input[type="submit"], #claim input[type="submit"], #cart #messages input[type="submit"], #invitee input[type="submit"] {
+	height: 34px;
+	line-height: 32px;
+}
+#navigation div a, #cart #messages a.button, .column#messages > div a.button {
+	height: 32px;
+	line-height: 32px;
+}
+#invite a.button {
+	height: 28px;
+	line-height: 28px;
+}
+#navigation div input[type="button"], #navigation div a, #cart #messages a.button, .column#messages > div a.button, #invite a.button {
+	border: 1px solid #BDBDBD;
+	color: #414042;
+	background: #D6D6D6; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EDEDED', endColorstr='#D6D6D6'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#D6D6D6)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #EDEDED,  #D6D6D6); /* for firefox 3.6+ */
+	float: left;
+}
+#navigation div a span, #claim #recipient a.button span, #cart #summary a.button span, #cart #messages a.button span, .column#messages > div a.button span, #invite a.button span {
+	position: relative;
+}
+#navigation div input[type="button"]:active, #navigation div a:active, #cart #messages a.button:active, .column#messages > div a.button:active {
+	background: #EDEDED; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D6D6D6', endColorstr='#EDEDED'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#D6D6D6), to(#EDEDED)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #D6D6D6,  #EDEDED); /* for firefox 3.6+ */
+}
+#navigation div input[type="button"].right, #navigation div a.right, #claim #recipient a.button {
+	float: right !important;
+	margin-left: 0px;
+	margin-right: 20px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+#navigation div input[type="button"].right, #navigation div a.right, #cart #messages input[type="submit"] {
+	border: 1px solid #C9C9C9;
+	color: #414042;
+	background: #9E9E9E; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D8D8D8', endColorstr='#9E9E9E'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#D8D8D8), to(#9E9E9E)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #D8D8D8,  #9E9E9E); /* for firefox 3.6+ */
+}
+#navigation div input[type="button"].right:active, #navigation div a.right:active, #cart #messages input[type="submit"]:active {
+	background: #D8D8D8; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9E9E9E', endColorstr='#D8D8D8'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#9E9E9E), to(#D8D8D8)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #9E9E9E,  #D8D8D8); /* for firefox 3.6+ */
+}
+#claim #recipient a.button, #invite a.button {
+	border: 1px solid #515151;
+	background: #6E6E6E; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#393939', endColorstr='#6E6E6E'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#393939), to(#6E6E6E)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #393939,  #6E6E6E); /* for firefox 3.6+ */
+}
+#navigation div a.red span, #claim #recipient a.button span, #cart #messages a.button.red span, #invite a.button span {
+	color: #FFFFFF;
+}
+#claim #recipient a.button:active, #invite a.button:active {
+	background: #393939; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6E6E6E', endColorstr='#393939'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#6E6E6E), to(#393939)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #6E6E6E,  #393939); /* for firefox 3.6+ */
+}
+#navigation div input[type="submit"], #navigation div a.submit, #claim input[type="submit"] {
+	float: right;
+}
+#navigation div input[type="submit"], #navigation div a.submit {
+	margin-right: 20px;
+}
+#claim #recipient a.button.red { 
+	margin-right: 20px;
+}
+#invitee input[type="submit"] {
+	float: right;
+}
+#navigation div a.red, #navigation div input[type="submit"], #navigation div a.submit, #claim #recipient a.button.red, #claim input[type="submit"], #cart #messages a.button.red, #cart #summary a.button.red, .column#messages > div a.button.red , #invitee input[type="submit"]{
+	padding-bottom: 4px;
+	border: 1px solid #CB1D00;
+	color: #FFFFFF;
+	background: #E41E00; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E41E00', endColorstr='#CB1D00'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#E41E00), to(#CB1D00)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #E41E00,  #CB1D00); /* for firefox 3.6+ */
+	text-shadow: 1px 1px #921400;
+}
+#navigation div a.red:active, #navigation div input[type="submit"]:active, #navigation div a.submit:active, #claim #recipient a.button.red:active, #claim input[type="submit"]:active, #cart #messages a.button.red:active, #cart #summary a.button.red:active, .column#messages > div a.button.red:active {
+	background: #CB1D00; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CB1D00', endColorstr='#E41E00'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#CB1D00), to(#E41E00)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #CB1D00,  #E41E00); /* for firefox 3.6+ */
+}
+#footer {
+	font-size: 12px;
+	display: block;
+	position: absolute;
+	margin-top: -14px;
+	width: 100%;
+	height: 32px;
+	overflow: hidden;
+	background: #000000;
+	z-index:100;
+}
+#footer ul {
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+#footer ul li {
+	display: block;
+	float: left;
+	clear: right;
+	margin-right: 12px;
+	padding-right: 12px;
+	text-transform: uppercase;
+}
+#footer ul li a {
+	position: relative;
+	top: 8px;
+	color: #EAEAEA;
+}
+#footer ul li a:hover {
+	border-bottom: 1px solid #FFFFFF;
+}
+fieldset.time {
+	width: 325px !important;
+}
+fieldset.time > div > input[type=text], #deliverymin, #deliveryshift, #deliveryzone {
+	float: left;
+}
+fieldset.time > div > div.separator {
+	float: left;
+	width: 20px;
+	text-align: center;
+	font-weight: bold;
+	color: #414042;
+}
+#deliverymin {
+	width: 60px;
+}
+#deliveryshift {
+	width: 60px;
+}
+#deliveryzone {
+        width: 100px;
+}
+#billing > div > div, #payments > div > div {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#billing div .sectiontitle, #payments div .sectiontitle {
+	background: #dfdfdf;
+	width: 420px;
+	margin: 0 0 0 30px;
+	padding:8px 15px 9px 15px;
+	height: 20px;
+	float: left;
+	clear: none;
+}
+#billing div > .sectiontitle > span, #payments div > .sectiontitle > span,
+.thankyouform ul li > span {
+	float: right;
+	display: block;
+	color: red;
+}
+#billing div > .sectiontitle > span > span, #payments div > .sectiontitle > span > span
+.thankyouform ul li > span > span {
+	color: #5d5d5d;
+	font-size: 12px;
+}
+#billing div > .sectiontitle > strong, #payments div > .sectiontitle > strong {
+	color: #404040;
+	vertical-align: middle;
+}
+.sectionright{
+	float: right;
+}
+#billing ul li,
+#payments ul li,
+#content.paypalconfirm ul li {
+	padding-top: 0;
+}
+#billing ul li span.small,
+#payments ul li span.small,
+#content.paypalconfirm ul li span.small {
+	font-size: 12px;
+	padding-left: 5px;
+	font-weight: normal;
+}
+#billing ul li span.small a,
+#payments ul li span.small a,
+#content.paypalconfirm ul li span.small a {
+	color: red;
+	text-decoration: underline;
+}
+#billing ul li input[type="checkbox"],
+#content.paypalconfirm ul li input[type="checkbox"],
+#content.creategift ul li input[type="checkbox"] {
+	display: none;
+}
+#billing ul li input[type="checkbox"] + label,
+#content.paypalconfirm ul li input[type="checkbox"] + label,
+#content.creategift ul li input[type="checkbox"] + label {
+	width: 100%;
+}
+#billing ul li input[type="checkbox"] + label > img,
+#content.paypalconfirm ul li input[type="checkbox"] + label > img,
+#content.creategift ul li input[type="checkbox"] + label > img {
+	background: url(//gca-common.s3.amazonaws.com/assets/checkbox.inactive.png) left center no-repeat;
+	width: 25px;
+	height: 25px;
+	display: block;
+	float: left;
+	clear: none;
+	position: relative;
+	top: -3px;
+}
+#billing ul li input[type="checkbox"]:checked + label > img,
+#content.paypalconfirm ul li input[type="checkbox"]:checked + label > img,
+#content.creategift ul li input[type="checkbox"]:checked + label > img {
+	background: url(//gca-common.s3.amazonaws.com/assets/checkbox.active.png) left center no-repeat;
+}
+#content.creategift li.date span.error {
+	clear: both;
+	float: left;
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+#billing #billingform ul li, #billing #creditcardform ul li {
+	margin-left: 20px;
+	margin-right: 15px;
+}
+#billingform, #creditcardform {
+	margin-left: 10px;
+	width: 62%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#billingform #billingcity {
+	width: 40%;
+	clear: none;
+	float: left;
+	margin-bottom: 10px;
+}
+#billingform #billingzip {
+	width: 30%;
+	clear: none;
+	float: left;
+}
+#paymentmethod {
+	width: 62%;
+	margin-left: 20px;
+}
+#paymentmethod ul {
+}
+#paymentmethod li{
+	display: block;
+	height: 100px;
+	background: #f9f9f9;
+	margin: 20px 14px 20px 10px !important;
+	border: 1px solid #dfdfdf;
+	background-position: 50% 40%;
+	background-repeat: no-repeat;
+}
+#paymentmethod .pmpaypal{
+	background-image: url("//gca-common.s3.amazonaws.com/assets/pm-paypal.png");
+}
+#paymentmethod .pmcc{
+	background-image: url("//gca-common.s3.amazonaws.com/assets/pm-cc.png");
+}
+#paymentmethod li input[type="radio"]{
+	margin: 10px;
+}
+#paymentmethod strong{
+	display: block;
+	margin-top: 50px;
+	font-size: 13px;
+	text-align: center;
+}
+#creditcardform #securitycode{
+	width: 60%;
+	float: left;
+	clear: none;
+}
+#creditcardform label {
+	height: 16px;
+}
+#creditcardform ul{
+	padding-top: 10px;
+}
+
+#creditcardform .select{
+	width: 100px;
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 0px;
+}
+#creditcardform .select select{
+	width: 122px;
+}
+#billingform .selectstate{
+	width: 100px;
+	margin-bottom: 10px;
+}
+#billingform .selectstate select{
+	width: 122px;
+}
+
+#billingform #region {
+	width: 87px;
+}
+
+#billingform .selectcountry{
+	width: 120px;
+	margin-bottom: 10px;
+	clear: right;
+}
+#billingform .selectcountry select{
+	width: 142px;
+}
+.stopfloat{
+	clear: both;
+}
+.extrawidth{
+	width: 210px;
+}
+.extrawidth2{
+	width: 230px;
+}
+.thankyouform {
+	padding: 20px 35px 0 30px;
+}
+.thankyouform textarea {
+	width: 98%;
+	height: 120px;
+	padding: 0;
+}
+.thankyouform textarea#contactMessage {
+	height: 120px !important;
+}
+.thankyouform input[type="text"] {
+	width: 96%;
+}
+.thankyouform ul li span.required {
+	left: -8px;
+	clear: both;
+}
+.thankyouform h1 {
+	font-size: 18px;
+	color: #E21E00;
+	font-weight: 700;
+}
+.thankyouform p {
+	margin-bottom: 20px;
+}
+.thankyouform p strong {
+	white-space: nowrap;
+}
+.thankyousent{
+	color: #E41E00;
+	font-size: 30px;
+	font-weight: 700;
+	padding: 30px;
+}
+.cardpreview{
+	background: url("//gca-common.s3.amazonaws.com/assets/preview_bg.png") 0% 0% repeat !important;
+}
+
+.cardpreview img{
+	background: #c0c0c0 !important;
+	width: 240px !important;
+	height: 150px !important;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	margin-left: 60px !important;
+    top: 50px !important;
+}
+.invitee{
+	border-top: none !important;
+}
+.cardpreview li.amount{
+	background: #c0c0c0 !important;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#0000ff50,endColorstr=#0000ff50) !important;
+	background-color: rgba(192,192,192,0.7) !important;
+	text-align: center;
+	height: 25px;
+	width: 100px;
+	color: #2e5591 !important;
+	font-size: 1.5em !important;
+	padding-top: 8px;
+}
+.cardpreview li.gifttitle{
+	color: white !important;
+	font-size: 2em !important;
+}
+.cardpreview li.giftfrom{
+	color: white !important;
+	font-size: 1em !important;
+}
+
+#status label.amount{
+	top: 14px !important;
+	margin-right: 15px;
+}
+#invitee div ul li > label > span{
+	float: right;
+	color: red;
+}
+#invitee div ul li > label > span > span{
+	color: #999999;
+	font-weight: normal;
+}
+#invitee div ul li > label{
+	width: 103%
+}
+.extrawidthli{
+	width: 112%;
+}
+#invitee input[type="submit"] {
+	margin-top: 20px;
+	width: 120px;
+	margin-right: 102px;
+}
+#invitee > div{
+	overflow-x: hidden;
+}
+#status.invitee a.help img {
+	vertical-align: -10%;
+	margin: 0 15px 0 5px;
+}
+.hidden {
+    display: none;
+}
+#content div ul li.hidden,
+#content div ul li.date label.hidden {
+    display: none;
+}
+.invisible {
+	visibility: hidden;
+}
+#recipDiv {
+    background-color: #DEE7F8;
+    border-bottom: 1px solid #B3C8EF;
+    border-radius: 0 12px 12px 0;
+    border-right: 1px solid #B3C8EF;
+    border-top: 1px solid #B3C8EF;
+    display: none;
+    font-size: 13px;
+    height: 19px;
+    line-height: 19px;
+    padding: 0 15px 0 6px;
+    position: absolute;
+    width: 72% !important;
+}
+#recipDiv span {
+    color: #888888;
+    cursor: pointer;
+    float: right;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 16px;
+    position: absolute;
+    right: 4px;
+}
+#recipDiv span:hover {
+    color: #444444;
+}
+.ie8 #recipDiv span, .ie7 #recipDiv span {
+    line-height: 20px;
+}
+#recipientFacebook.selected {
+    padding-left: 30px !important;
+    width: 277px !important;
+}
+#recipPic {
+    display: none;
+    height: 21px;
+    position: absolute;
+    width: 21px;
+}
+/* TipTip CSS - Version 1.2 */
+#tiptip_holder {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+}
+#tiptip_holder.tip_top {
+	padding-bottom: 5px;
+}
+#tiptip_holder.tip_bottom {
+	padding-top: 5px;
+}
+#tiptip_holder.tip_right {
+	padding-left: 5px;
+}
+#tiptip_holder.tip_left {
+	padding-right: 5px;
+}
+#tiptip_content {
+	font-size: 12px;
+	line-height: 1.5em;
+	color: #fff;
+	text-shadow: 0 0 2px #000;
+	padding: 10px;
+	border: 1px solid rgba(255,255,255,0.25);
+	background-color: rgb(25,25,25);
+	background-color: rgba(25,25,25,0.92);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#000));
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	box-shadow: 0 0 3px #555;
+	-webkit-box-shadow: 0 0 3px #555;
+	-moz-box-shadow: 0 0 3px #555;
+}
+#tiptip_arrow, #tiptip_arrow_inner {
+	position: absolute;
+	border-color: transparent;
+	border-style: solid;
+	border-width: 6px;
+	height: 0;
+	width: 0;
+}
+#tiptip_holder.tip_top #tiptip_arrow {
+	border-top-color: #fff;
+	border-top-color: rgba(255,255,255,0.35);
+}
+#tiptip_holder.tip_bottom #tiptip_arrow {
+	border-bottom-color: #fff;
+	border-bottom-color: rgba(255,255,255,0.35);
+}
+#tiptip_holder.tip_right #tiptip_arrow {
+	border-right-color: #fff;
+	border-right-color: rgba(255,255,255,0.35);
+}
+#tiptip_holder.tip_left #tiptip_arrow {
+	border-left-color: #fff;
+	border-left-color: rgba(255,255,255,0.35);
+}
+#tiptip_holder.tip_top #tiptip_arrow_inner {
+	margin-top: -7px;
+	margin-left: -6px;
+	border-top-color: rgb(25,25,25);
+	border-top-color: rgba(25,25,25,0.92);
+}
+#tiptip_holder.tip_bottom #tiptip_arrow_inner {
+	margin-top: -5px;
+	margin-left: -6px;
+	border-bottom-color: rgb(25,25,25);
+	border-bottom-color: rgba(25,25,25,0.92);
+}
+#tiptip_holder.tip_right #tiptip_arrow_inner {
+	margin-top: -6px;
+	margin-left: -5px;
+	border-right-color: rgb(25,25,25);
+	border-right-color: rgba(25,25,25,0.92);
+}
+#tiptip_holder.tip_left #tiptip_arrow_inner {
+	margin-top: -6px;
+	margin-left: -7px;
+	border-left-color: rgb(25,25,25);
+	border-left-color: rgba(25,25,25,0.92);
+}
+/* Webkit Hacks  */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#tiptip_content {
+		padding: 10px;
+		background-color: rgba(45,45,45,0.88);
+	}
+	#tiptip_holder.tip_bottom #tiptip_arrow_inner {
+		border-bottom-color: rgba(45,45,45,0.88);
+	}
+	#tiptip_holder.tip_top #tiptip_arrow_inner {
+		border-top-color: rgba(20,20,20,0.92);
+	}
+}
+/*for facebook friends seletor*/
+.ui-autocomplete li {
+    line-height: 24px;
+}
+.ui-autocomplete div {
+    float: left;
+    height: 24px;
+    margin-right: 4px;
+    width: 24px;
+}
+.ui-autocomplete a img {
+    height: 24px;
+    width: 24px;
+}
+.ui-autocomplete a {
+    overflow: hidden;
+}
+.ui-menu {
+    display: block;
+    float: left;
+    list-style: none outside none;
+    margin: 0;
+    padding: 2px;
+}
+.ui-menu .ui-menu {
+    margin-top: -3px;
+}
+.ui-menu .ui-menu-item {
+    clear: left;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.ui-menu .ui-menu-item a {
+    display: block;
+    line-height: 1.5;
+    padding: 0.2em 0.4em;
+    text-decoration: none;
+}
+.ui-menu .ui-menu-item a.ui-state-hover, .ui-menu .ui-menu-item a.ui-state-active {
+    font-weight: normal;
+    margin: -1px;
+}
+#customize li.boxed strong{
+	font-size: 18px;
+	color: #414042;
+}
+#customize li.boxed p{
+	font-size: 12px;
+	color: #414042;
+}
+#invitee + #navigation > div{
+	background-color: none;
+	border-top: none;
+}
+#status img.backarrow{
+	float: right;
+	display: block;
+	height: 22px;
+	width: 22px;
+	background: url(//gca-common.s3.amazonaws.com/assets/back_arrow.png) center center no-repeat;
+	margin-top : 20px;
+	margin-right: 100px;
+}
+
+#status img.backarrow + label{
+	float: right;
+	display: block;
+	font-size: 14px !important;
+	margin-right: -120px;
+	text-transform: none;
+
+}
+
+#status a , #status a:visited , #status a:link , #status a:hover, #status a:active{
+	color: #ffffff;
+}
+
+.errorMessage{
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 16px;
+	text-align: center;
+	padding: 8px 10px 9px;
+	width: auto;
+	position: relative;
+	background: red;
+	color:#ffffff
+}
+
+.flashMessage{
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 16px;
+	text-align: center;
+	padding: 8px 10px 9px;
+	width: auto;
+	position: relative;
+	background: #ffffff;
+	color:#000000
+}
+
+.cropForm h5 {
+    text-align: center;
+}
+.cropForm table {
+    width: 100%;
+}
+.cropTd {
+    width: 440px;
+}
+.cropTd .jcrop-holder {
+    margin: 0 auto;
+}
+.cropPreviewWrap {
+    height: 95px;
+    overflow: hidden;
+    position: relative;
+    width: 150px;
+}
+.cropPreviewWrap img {
+    z-index: 9;
+}
+
+.previewCell {
+    padding-left: 10px;
+}
+
+.card_outer_wrap {
+    clear: left;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 582px;
+}
+.scene_outer_wrap {
+    clear: left;
+    margin: 12px auto;
+    overflow: hidden;
+    width: 410px;
+}
+.ie7 .card_outer_wrap {
+    clear: none;
+}
+.card_outer_wrap em.error {
+    float: left;
+    width: auto;
+}
+.card_inner_wrap {
+    background-color: #F3F5F4;
+    border-bottom: 1px solid #EAE6E5;
+    border-top: 1px solid #EAE6E5;
+    float: left;
+    height: 127px;
+    width: 516px;
+}
+.scene_inner_wrap {
+    background-color: #F3F5F4;
+    border-bottom: 1px solid #EAE6E5;
+    border-top: 1px solid #EAE6E5;
+    float: left;
+    height: 127px;
+    width: 350px;
+}
+.card_inner_wrap {
+    width: 350px;
+}
+div.arrow {
+    background-attachment: scroll;
+    background-color: #F3F5F4;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #444444;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 22px;
+    height: 127px;
+    line-height: 127px;
+    position: relative;
+    text-align: center;
+    width: 32px;
+    z-index: 2;
+}
+div.arrow {
+    width: 28px;
+}
+div.arrow:hover {
+    background-color: #EAE6E5;
+    color: #000000;
+}
+div.arrow.left {
+    border-bottom: 1px solid #EAE6E5;
+    border-left: 1px solid #EAE6E5;
+    border-radius: 10px 0 0 10px;
+    border-top: 1px solid #EAE6E5;
+    margin-right: -20px;
+    padding-right: 20px;
+}
+div.arrow.no-pointer, div.arrow.no-pointer:hover {
+    background-color: #F3F5F4;
+    cursor: default;
+}
+div.arrow.right {
+    border-bottom: 1px solid #EAE6E5;
+    border-radius: 0 10px 10px 0;
+    border-right: 1px solid #EAE6E5;
+    border-top: 1px solid #EAE6E5;
+    margin-left: -20px;
+    padding-left: 20px;
+}
+div.cards {
+    background-color: #FFFFFF;
+    border: 1px solid #EAE6E5;
+    border-radius: 10px 10px 10px 10px;
+    float: left;
+    height: 115px;
+    margin-top: 5px;
+    overflow: hidden;
+    position: relative;
+    width: 514px;
+    z-index: 3;
+}
+div.cards {
+    width: 348px;
+}
+div.cards_wrap {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 2000px;
+}
+.csstransitions .cards_wrap {
+    -moz-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+div.card_section {
+    float: left;
+    padding-left: 8px;
+}
+.cards_wrap div.card_section div.card {
+    background-attachment: scroll;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+    float: left;
+    height: 115px;
+    margin: 0;
+    position: relative;
+    width: 166px;
+}
+.no-borderradius .cards_wrap div.card_section .glow {
+    background: url("//gc-fgs.s3.amazonaws.com/common/ie_card_bg.png") no-repeat scroll center center #FFFFFF;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.cards_wrap div.card_section div .physical {
+    background: url("//giftingapp.s3.amazonaws.com/assets/gift/physicalDelivery.png") no-repeat scroll 0 -108px transparent;
+    bottom: 10px;
+    height: 36px;
+    position: absolute;
+    right: 8px;
+    width: 36px;
+    z-index: 50;
+}
+.cards_wrap div.card_section div:hover .physical {
+    background-position: 0 -72px;
+}
+.no-borderradius .cards_wrap div.card_section div .physical {
+    background-position: 0 -36px;
+}
+.no-borderradius .cards_wrap div.card_section div:hover .physical {
+    background-position: 0 0;
+}
+.ie .cards_wrap div.card_section div .img {
+    z-index: 1;
+}
+.cards_wrap.selected div.card_section div.card {
+    -moz-transform: scale(0.85);
+    -moz-transition: all 0.3s ease-in-out 0s;
+}
+.no-borderradius .cards_wrap.selected div.card_section .img {
+    position: absolute !important;
+}
+.cards_wrap div.card_section div:hover .glow, .cards_wrap div.card_section div.selected .glow {
+    display: block;
+}
+.cards_wrap div.card_section div.selected .glow {
+    background-color: #2569A6;
+}
+.cards_wrap div.card_section div.card.selected {
+	-webkit-transition: -webkit-transform .3s ease-in-out;
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+}
+.borderradius .cards_wrap div.card_section div.card .img {
+    border: 3px solid #FFFFFF;
+}
+.borderradius .cards_wrap div.card_section div.card .cropPreviewWrap .img {
+    border: medium none;
+}
+.borderradius .cards_wrap div.card_section div.card.selected .img {
+    border-color: #2569A6;
+    border-radius: 12px 12px 12px 12px;
+}
+.no-borderradius .cards_wrap div.card_section div.card.selected {
+    background-color: #2569A6;
+}
+.no-borderradius .cards_wrap div.card_section div.card .img {
+    margin: 10px 0 0 8px;
+}
+.no-borderradius .cards_wrap div.card_section div.card.selected .img {
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+}
+.cards_wrap div.card_section .img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    left: 0;
+    margin: 7px 0 0 5px;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+.cards_wrap div.card_section .cropPreviewWrap .img {
+    margin: 0;
+}
+div.card_section .cropPreviewWrap {
+    border: 3px solid white;
+    margin: 7px 0 0 5px;
+}
+.cards_wrap div.card_section .card {
+    position: relative;
+}
+.card_section.current.empty {
+    padding-top: 15px;
+    width: 514px;
+}
+.card_section.current.empty h1 {
+    font-size: 30px;
+    text-align: center;
+    visibility: visible;
+}
+/* Claim link and contribution expiration page */
+#claim #expired, #invitee #expired {
+	margin: 25px;
+}
+#claim #expired p, #invitee #expired p {
+	text-align: center;
+	margin-bottom: 25px;
+}
+#claim #expired a, #invitee #expired a {
+	color: #E21E00;
+	text-decoration: underline;
+}
+/* PayPal payment confirmation page */
+#content.paypalconfirm ul,
+#content.paypalconfirm div.paypal {
+	float: left;
+	margin: 20px 0;
+}
+#content.paypalconfirm div.paypal {
+	margin-top: 25px;
+	margin-left: 140px;
+}
+#content.paypalconfirm ul li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+#content.paypalconfirm ul li.info {
+	border-bottom: 1px dashed #AAAAAA;
+}
+#content.paypalconfirm ul li.info label {
+	width: 120px;
+}
+#content.paypalconfirm ul li.checkbox {
+	padding-top: 10px;
+	padding-left: 8px;
+}
+/* SecurePay form */
+#Panel1 #billing.column {
+	min-width: 750px;
+}
+#Panel1 #billing > div {
+	border: 0;
+}
+#Panel1 #navigation > div {
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+#securepayform {
+	width: 750px;
+	height: auto;
+	background: #FFFFFF;
+	margin-top: -15px;
+	margin-left: auto;
+	margin-right: auto;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+}
+#securepayform iframe {
+	display: none;
+	width: 100%;
+	height: 687px;
+	border: 0;
+	overflow: hidden;
+	/* Only affect Firefox and IE and it will get overridden
+	   in the following WebKit hack */
+	margin-top: -15px;
+}
+/* WebKit hack
+   For WebKit browsers (safari and chrome) we need to move the
+   parent container of the iframe; otherwise the top of the iframe
+   will get cut off */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#securepayform {
+		margin-top: -15px;
+	}
+	#securepayform iframe {
+		margin-top: 0;
+	}
+}
+/* SecurePay related */
+#securepayloader {
+	clear: both;
+	margin-left: 120px;
+	overflow: hidden;
+}
+#securepayloader iframe {
+	height: 720px;
+	overflow: hidden;
+}
+#securepayloader img {
+	margin-top: -20px;
+}
+#payments > div {
+	position: relative;
+	padding-bottom: 0;
+	overflow: visible;
+}
+#payments #floatingsummary {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	margin: 0;
+	padding: 0;
+	width: 30%;
+	z-index: 10;
+}
+#floatingsummary #ordersum,
+#floatingsummary #summary {
+	float: none;
+	margin: 0;
+	width: auto;
+	padding-bottom: 35px;
+}
+#floatingsummary #ordersum {
+	margin-bottom: 130px;
+}
+#floatingsummary #ordersum.compress {
+	margin-bottom: 30px;
+}
+
+#messages.column > div a.button.red.thiner {
+	padding-bottom: 0;
+}
+#barcode{
+	-webkit-user-select: text;
+	cursor: text;
+}
+#billing ul li input[type='checkbox'],
+#invite hr + input[type='checkbox'] { 
+	display: block !important;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border: none;
+	outline: none;
+	width: 17px;
+	height: 17px;
+	margin-left: 3px;
+	margin-top: 6px;
+	position: absolute;
+}
+#invite hr + input[type='checkbox'] { 
+	left: 30px;
+}
+#billing ul li input[type='checkbox']:focus,
+#invite hr + input[type='checkbox']:focus { 
+	-moz-box-shadow: 0px 0px 2px 2px rgba(139,139,139,0.8) !important;
+	-webkit-box-shadow: 0px 0px 2px 2px rgba(139,139,139,0.8) !important;
+	box-shadow: 0px 0px 2px 2px rgba(139,139,139,0.8) !important;
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=2,MakeShadow=true,ShadowOpacity=0.30) !important;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=2,MakeShadow=true,ShadowOpacity=0.30)" !important;
+	zoom: 1;
+}
+#billing ul li > label,
+#invite hr + input[type='checkbox'] + label { 
+	position: relative;
+	top: 5px;
+	left: -1px;
+}
+#optinbox { 
+	clear: both;
+}
+
+/* sharethis icon override */
+.st_facebook_large .stLarge, .st_twitter_large .stLarge, .st_googleplus_large .stLarge {
+	background-position: 0 0 !important;
+}
+.st_facebook_large .stLarge {
+	background-image: url(//gca-common.s3.amazonaws.com/assets/sharethis.facebook.png) !important;
+}
+.st_twitter_large .stLarge {
+	background-image: url(//gca-common.s3.amazonaws.com/assets/sharethis.twitter.png) !important;
+}
+.st_googleplus_large .stLarge {
+	background-image: url(//gca-common.s3.amazonaws.com/assets/sharethis.google.png) !important;
+}

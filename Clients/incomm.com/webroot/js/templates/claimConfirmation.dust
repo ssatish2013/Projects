@@ -1,0 +1,19 @@
+<h4>Get your gift faster!<div class="close"></div></h4>
+<form>
+<ul>
+    <li>
+			You can get your gift faster by connecting to Facebook.
+		</li>
+    <li class="buttons">
+
+      <input type="hidden" name="giftGuid" value="{guid}" />
+    
+      <label class="buttonLabel cancel">
+        <input type="submit" value="Cancel" />
+      </label>
+      <label class="buttonLabel">
+        <input id="claimConnect" type="button" value="Connect" />
+      </label>
+    </li>
+</ul>
+</form>

@@ -1,0 +1,17 @@
+*.swp
+*~
+nbproject
+webroot/stats
+webroot/call.xml
+webroot/js/build
+webroot/css/build
+includes/views/build
+webroot/js/all-*.js
+push
+
+# eclipse files
+/.project
+/.project.orig
+/.externalToolBuilders
+/.settings
+/.buildpath

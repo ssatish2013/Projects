@@ -1,0 +1,410 @@
+/**
+ * Partner css stylesheets
+ *
+ * Overriding all the external and embedded css defined before this file
+ * is included. This css file is parsed, compressed and packed with smarty
+ * and CssMin libraries.
+ *
+ * @copyright Copyright (c) 2012 InComm Canada (http://incomm-canada.com)
+ * @author Waltz.of.Pearls <rma@incomm.com, rollie@groupcard.com, rollie.ma@gmail.com>
+ * @version 0.1.0
+ */
+
+{$ui = $settings->ui}
+{$css = $settings->css}
+
+{$cancelButtonBorderColor = (!is_null($css->cancelButtonBorderColor) && $css->cancelButtonBorderColor != '')
+	? $css->cancelButtonBorderColor
+	: $css->cancelButtonGradientTo}
+{$nextButtonBorderColor = (!is_null($css->nextButtonBorderColor) && $css->nextButtonBorderColor != '')
+	? $css->nextButtonBorderColor
+	: $css->nextButtonGradientTo}
+{$dropDownMenuBorderColor = (!is_null($css->dropDownMenuBorderColor) && $css->dropDownMenuBorderColor != '')
+	? $css->dropDownMenuBorderColor
+	: $css->dropDownMenuGradientTo}
+/* Primary background image and color */
+body > div {
+	background: {$css->primaryBackgroundColor} url("{$css->primaryBackgroundImage}");
+}
+/* Header area (live preview and robbin bar are not included) */
+#header {
+	background: {$css->headerBackgroundColor} url("{$css->headerBackgroundImage}") center top no-repeat;
+}
+#header.homepage {
+	background-image: none;
+}
+#header #logo img {
+	background: url("{$css->partnerLogo}") center center no-repeat;
+	{if (!is_null($css->partnerLogoWidth) && $css->partnerLogoWidth != '')}
+		width: {$css->partnerLogoWidth};
+	{/if}
+}
+/* Live preview */
+#design {
+	background-color: {$css->previewBackgroundColor};
+}
+#design > #card > img {
+	background: url({$css->previewDefaultCardDesign}) center center no-repeat !important;
+}
+#design.tile {
+	background-image: url("{$css->previewBackgroundImage}");
+	background-repeat: repeat;
+}
+#design #card ul li {
+	color: {$css->previewDefaultTextColor};
+}
+#design #card ul li.amount {
+	color: {$css->previewDefaultAmountTextColor};
+	text-shadow: 1px 1px {$css->previewDefaultAmountTextShadowColor};
+}
+#design.tile #card ul li {
+	color: {$css->previewTextColor};
+}
+#design.tile #card ul li.amount {
+	text-shadow: none;
+}
+#design.tile #card ul li.amount span#symbolAndAmount {
+	background-color: {$css->previewAmountBackgroundColor};
+	color: {$css->previewAmountTextColor};
+}
+
+{$partner = globals::partner()}
+{$currency =  settingModel::getPartnerSettings($partner, 'currency')}
+{foreach from=$currency key=k item=c}
+	#content div ul li input.currency.{$k}, #status.invitee div ul li input.currency.{$k} {
+	       	background-image: url({$c});
+	}
+{/foreach}
+
+/* Shopping cart button (cart item count) */
+#design > #card > fieldset.cart a.cartTitle span,
+#design > #card > fieldset.cart a.cartQty span,
+#header > #card > fieldset.cart a.cartTitle span,
+#header > #card > fieldset.cart a.cartQty span { 
+	color: {$css->cartButtonText};
+        text-shadow: 1px 0 {$css->cartButtonTextShadow};
+}
+#design > #card > fieldset.cart a.cartTitle,
+#design > #card > fieldset.cart a.cartQty,
+#header > #card > fieldset.cart a.cartTitle,
+#header > #card > fieldset.cart a.cartQty {
+	background: {$css->cartButtonGradientTo};
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="{$css->cartButtonGradientFrom}", endColorstr="{$css->cartButtonGradientTo}"); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from({$css->cartButtonGradientFrom}), to({$css->cartButtonGradientTo})); /* for webkit browsers */
+	background: -moz-linear-gradient(top, {$css->cartButtonGradientFrom}, {$css->cartButtonGradientTo}); /* for firefox 3.6+ */
+}
+#design > #card > fieldset.cart:active a.cartTitle,
+#design > #card > fieldset.cart:active a.cartQty,
+#header > #card > fieldset.cart:active a.cartTitle,
+#header > #card > fieldset.cart:active a.cartQty {
+	background: {$css->cartButtonGradientFrom};
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="{$css->cartButtonGradientTo}", endColorstr="{$css->cartButtonGradientFrom}"); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from({$css->cartButtonGradientTo}), to({$css->cartButtonGradientFrom})); /* for webkit browsers */
+	background: -moz-linear-gradient(top, {$css->cartButtonGradientTo}, {$css->cartButtonGradientFrom}); /* for firefox 3.6+ */
+}
+/* Shopping cart custom background image */
+#design > #card > fieldset.cart a.cartTitle img,
+#header > #card > fieldset.cart a.cartTitle img {
+	background:url({$css->cartBackgroundImage}) 8px center no-repeat !important;
+}
+/* Active checkbox style images  */
+#invite hr + input[type="checkbox"]:checked + label > img,
+#billing ul li input[type="checkbox"]:checked + label > img,
+#content.paypalconfirm ul li input[type="checkbox"]:checked + label > img {
+	background-image: url({$css->checkboxActiveImage});
+}
+/* Inactive checkbox style images  */
+#invite hr + input[type="checkbox"] + label > img,
+#billing ul li input[type="checkbox"] + label > img,
+#content.paypalconfirm ul li input[type="checkbox"] + label > img {
+	background-image: url({$css->checkboxInactiveImage});
+}
+/* class for checkbox when manually switch on/off */
+.checkbox_on {
+    background-image: url("https://gca-common.s3.amazonaws.com/assets/checkbox.active.png") !important;
+}
+.checkbox_off {
+    background-image: url("https://gca-common.s3.amazonaws.com/assets/checkbox.inactive.png") !important;
+}
+/* Gifting modes container at live preview block */
+#blackmenu { 
+	background-color: {$css->giftmodeBackgroundColor} !important;
+	border: 1px solid {$css->giftmodeBorderRightColor} !important;
+}
+#blackmenu li.text { 
+	color: {$css->giftmodeTextColor} !important;
+	border-left: 1px solid {$css->giftmodeBorderLeftColor} !important;
+	border-right: 1px solid {$css->giftmodeBorderRightColor} !important;
+}
+/* Robbin bar (progress, status, barcode and homepage red menu) */
+#progress ul li.active,
+#status ul li.active,
+#redmenu.redbackground {
+	background: {$css->ribbonBarActiveGradientTo} !important; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="{$css->ribbonBarActiveGradientFrom}",endColorstr="{$css->ribbonBarActiveGradientTo}") !important;
+	background: -webkit-gradient(linear, left top, left bottom, from({$css->ribbonBarActiveGradientFrom}), to({$css->ribbonBarActiveGradientTo})) !important; /* for webkit browsers */
+	background: -moz-linear-gradient(top, {$css->ribbonBarActiveGradientFrom}, {$css->ribbonBarActiveGradientTo}) !important; /* for firefox 3.6+ */ 
+	border-right: 1px solid {$css->ribbonBarActiveGradientFrom} !important;
+}
+.dialogheader {
+	background: {$css->ribbonBarActiveGradientTo} !important; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="{$css->ribbonBarActiveGradientFrom}",endColorstr="{$css->ribbonBarActiveGradientTo}") !important;
+	background: -webkit-gradient(linear, left top, left bottom, from({$css->ribbonBarActiveGradientFrom}), to({$css->ribbonBarActiveGradientTo})) !important; /* for webkit browsers */
+	background: -moz-linear-gradient(top, {$css->ribbonBarActiveGradientFrom}, {$css->ribbonBarActiveGradientTo}) !important; /* for firefox 3.6+ */ 
+}
+#progress ul li.active,
+#barcode ul li.active,
+#status ul li.active,
+#redmenu li {
+	color: {$css->ribbonBarActiveTextColor} !important;
+}
+#redmenu li:hover {
+	background-image: url("{$css->ribbonBarArrowImageOnHover}");
+}
+#progress ul li.active,
+#barcode ul li.active,
+#status ul li.active {
+	text-shadow: 1px 1px {$css->ribbonBarActiveTextShadowColor} !important;
+}
+#redmenu {
+	border-color: {$css->ribbonBarActiveGradientFrom} !important;
+}
+#redmenu li {
+	border-left-color: {$css->ribbonBarActiveGradientTo} !important;
+	border-right-color: {$css->ribbonBarActiveGradientFrom} !important;
+}
+#progress ul,
+#barcode ul,
+#status ul {
+	background-color: {$css->ribbonBarInactiveBackgroundColor} !important;
+}
+#progress ul li,
+#barcode ul li,
+#status ul li {
+	color: {$css->ribbonBarInactiveTextColor};
+	text-shadow: 1px 1px {$css->ribbonBarInactiveTextShadowColor};
+}
+/* Homepage main image */
+#content > #homecenter {
+	background: url("{$css->homepageImage}") no-repeat;
+}
+/* Cart Summary Order Total element */
+#cart #messages table tfoot tr td.amount span {
+	color: {$css->ribbonBarActiveGradientTo} !important;
+}
+{if !is_null($css->redemptionTermsLinkColor)}
+#cart #messages table tbody tr td.terms a { 
+	color: {$css->redemptionTermsLinkColor} !important;
+}
+{/if}
+/* Product selector element */
+#products .designlist li.selected img.design {
+	border: 1px solid {$css->ribbonBarActiveGradientTo} !important;
+}
+/* Cancel, go back buttons */
+#navigation div input[type="button"],
+#navigation div a,
+#cart #messages a.button,
+.column#messages > div a.button,
+#invite a.button {
+	border: 1px solid {$cancelButtonBorderColor};
+	color: {$css->cancelButtonTextColor};
+	background: {$css->cancelButtonGradientTo}; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="{$css->cancelButtonGradientFrom}", endColorstr="{$css->cancelButtonGradientTo}"); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from({$css->cancelButtonGradientFrom}), to({$css->cancelButtonGradientTo})); /* for webkit browsers */
+	background: -moz-linear-gradient(top, {$css->cancelButtonGradientFrom}, {$css->cancelButtonGradientTo}); /* for firefox 3.6+ */ 
+	float: left;
+}
+#navigation div input[type="button"]:active,
+#navigation div a:active,
+#cart #messages a.button:active,
+.column#messages > div a.button:active,
+#invite a.button:active {
+	background: {$css->cancelButtonGradientFrom}; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="{$css->cancelButtonGradientTo}", endColorstr="{$css->cancelButtonGradientFrom}"); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from({$css->cancelButtonGradientTo}), to({$css->cancelButtonGradientFrom})); /* for webkit browsers */
+	background: -moz-linear-gradient(top, {$css->cancelButtonGradientTo}, {$css->cancelButtonGradientFrom}); /* for firefox 3.6+ */ 
+}
+/* Next step button */
+#navigation div a.red,
+#navigation div input[type="submit"],
+#navigation div a.submit,
+#claim #recipient a.button.red,
+#claim input[type="submit"],
+#cart #messages a.button.red,
+#cart #summary a.button.red,
+.column#messages > div a.button.red,
+#invitee input[type="submit"],
+.dialogfooter input[type="submit"],
+.dialogfooter input[type="button"],
+.dialogfooter button {
+	border: 1px solid {$nextButtonBorderColor} !important;
+	color: {$css->nextButtonTextColor} !important;
+	text-shadow: 1px 1px {$css->nextButtonGradientFrom} !important;
+	background: {$css->nextButtonGradientTo} !important; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="{$css->nextButtonGradientFrom}", endColorstr="{$css->nextButtonGradientTo}") !important; /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from({$css->nextButtonGradientFrom}), to({$css->nextButtonGradientTo})) !important; /* for webkit browsers */
+	background: -moz-linear-gradient(top, {$css->nextButtonGradientFrom}, {$css->nextButtonGradientTo}) !important; /* for firefox 3.6+ */
+}
+#navigation div a.red:active,
+#navigation div input[type="submit"]:active,
+#navigation div a.submit:active,
+#claim #recipient a.button.red:active,
+#claim input[type="submit"]:active,
+#cart #messages a.button.red:active,
+#cart #summary a.button.red:active,
+.column#messages > div a.button.red:active,
+#invitee input[type="submit"]:active,
+.dialogfooter input[type="submit"]:active,
+.dialogfooter input[type="button"]:active,
+.dialogfooter button:active {
+	background: {$css->nextButtonGradientFrom} !important; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="{$css->nextButtonGradientTo}", endColorstr="{$css->nextButtonGradientFrom}") !important; /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from({$css->nextButtonGradientTo}), to({$css->nextButtonGradientFrom})) !important; /* for webkit browsers */
+	background: -moz-linear-gradient(top, {$css->nextButtonGradientTo}, {$css->nextButtonGradientFrom}) !important; /* for firefox 3.6+ */
+}
+/* Drop down menu and browse all button */
+#navigation div input[type="button"].right,
+#navigation div a.right,
+#cart #messages input[type="submit"],
+#content div ul li a.button,
+#content div ul li a.play,
+#content div ul li a.playBig,
+#invitee div ul li a.button,
+#invitee div ul li a.play,
+#invitee div ul li a.playBig,
+#cart #summary a.button,
+.select, .dd2,
+#btnBrowseAll.button {
+	border: 1px solid {$dropDownMenuBorderColor};
+	color: {$css->dropDownMenuTextColor};
+	background: {$css->dropDownMenuGradientTo}; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="{$css->dropDownMenuGradientFrom}", endColorstr="{$css->dropDownMenuGradientTo}"); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from({$css->dropDownMenuGradientFrom}), to({$css->dropDownMenuGradientTo})); /* for webkit browsers */
+	background: -moz-linear-gradient(top, {$css->dropDownMenuGradientFrom}, {$css->dropDownMenuGradientTo}); /* for firefox 3.6+ */
+}
+#navigation div input[type="button"].right:active,
+#navigation div a.right:active,
+#cart #messages input[type="submit"]:active,
+#content div ul li a.button:active,
+#content div ul li a.play:active,
+#content div ul li a.playBig:active,
+#cart #summary a.button:active,
+.select:active, .dd2:active,
+#btnBrowseAll.button:active {
+	background: {$css->dropDownMenuGradientFrom}; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="{$css->dropDownMenuGradientTo}", endColorstr="{$css->dropDownMenuGradientFrom}"); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from({$css->dropDownMenuGradientTo}), to({$css->dropDownMenuGradientFrom})); /* for webkit browsers */
+	background: -moz-linear-gradient(top, {$css->dropDownMenuGradientTo}, {$css->dropDownMenuGradientFrom}); /* for firefox 3.6+ */
+}
+.select select, .dd2 .ddTitle span.ddTitleText{
+	color: {$css->dropDownMenuTextColor};
+}
+/* Send thank you button and create gift button on claim page */
+#claim #recipient a.button,
+#invite a.button {
+	border: 1px solid {$css->claimThankYouButtonBorderColor};
+	background: {$css->claimThankYouButtonGradientTo}; /* for non-css3 browsers */
+	color: {$css->claimThankYouButtonTextColor};
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="{$css->claimThankYouButtonGradientFrom}", endColorstr="{$css->claimThankYouButtonGradientTo}"); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from({$css->claimThankYouButtonGradientFrom}), to({$css->claimThankYouButtonGradientTo})); /* for webkit browsers */
+	background: -moz-linear-gradient(top, {$css->claimThankYouButtonGradientFrom}, {$css->claimThankYouButtonGradientTo}); /* for firefox 3.6+ */
+}
+#claim #recipient a.button:active,
+#invite a.button:active {
+	background: {$css->claimThankYouButtonGradientFrom}; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="{$css->claimThankYouButtonGradientTo}", endColorstr="{$css->claimThankYouButtonGradientFrom}"); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from({$css->claimThankYouButtonGradientTo}), to({$css->claimThankYouButtonGradientFrom})); /* for webkit browsers */
+	background: -moz-linear-gradient(top, {$css->claimThankYouButtonGradientTo}, {$css->claimThankYouButtonGradientFrom}); /* for firefox 3.6+ */
+}
+/* Required field asterisk symbol color */
+#progress label.required span,
+#content div ul li span.required,
+#invite ul li span.required,
+#invitee div ul li span.required,
+#billing ul li span.required,
+.thankyouform ul li span.required {
+	color: {$css->requiredAsteriskColor};
+}
+/* Verify page edit link color */
+#content > div a.edit {
+	color: {$css->verifyEditLinkColor};
+}
+/* Navigation bar background color */
+#navigation > div {
+	background-color: {$css->navigationBarBackgroundColor};
+}
+/* Link text color */
+#cart #messages table tbody tr td.terms a,
+#cart #messages table tbody tr td.empty a,
+#billing ul li span.small a,
+#payments ul li span.small a,
+#content.paypalconfirm ul li span.small a,
+#billing div > .sectiontitle > span,
+.thankyouform ul li > span {
+	color: {$css->linkColor};
+}
+/* Check icon on claim page (li background image) */
+#claim div #recipient ul li {
+	background-image: url({$css->claimListCheckIcon});
+}
+/* Alt text color #B71800 #E21E00 */
+#content > #homecenter > ul.homenote li.whitenote span,
+#messages h1,
+#messages h2,
+#invite h1 {
+	color: {$css->altTextColor};
+}
+/* Social header background color */
+#header #social {
+	background-color: {$css->socialHeaderBackgroundColor};
+}
+/* Social header link color */
+#header #social li.right a {
+        color: {$css->socialHeaderLinkColor} !important;
+}
+/* Footer background color */
+#footer {
+	background-color: {$css->footerBackgroundColor};
+}
+/* Footer link color */
+#footer ul li a {
+	color: {$css->footerLinkColor} !important;
+}
+/* Footer link hover effect */
+#footer ul li a:hover {
+	border-bottom: 1px solid {$css->footerLinkColor} !important;
+}
+
+/* Checkout page opt-in checkbox visibility control */
+#optinbox {
+	display: {if $ui->hasOptinPromoBox} block {else} none {/if} !important;
+}
+
+{if !is_null($css->previewTextFontFaceUrl)}
+	/* Preview text font face and font related stylesheets */
+	@font-face { 
+		font-family: "Preview Text Font";
+		src: url("{$css->previewTextFontFaceUrl}") format("woff"); 
+		font-weight: normal;
+		font-style: normal;
+	}
+	#design.tile #card ul li {
+		font-family: "Preview Text Font";
+	}
+	#design.tile #card ul li.amount span#symbolAndAmount {
+		padding: 12px 10px 6px 12px;
+	}
+{/if}
+
+{if (!is_null($css->customBodyTextFontFaceUrl) && $css->customBodyTextFontFaceUrl != '')}
+	@font-face { 
+		font-family: "Custom Body Text Font";
+		src: url("{$css->customBodyTextFontFaceUrl}") format("woff"); 
+		font-weight: normal;
+		font-style: normal;
+	}
+	body, input, button, select { 
+		font-family: "Custom Body Text Font", Helvetica, "Times New Roman", "Courier New";
+	}
+{/if}

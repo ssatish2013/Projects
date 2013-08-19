@@ -1,0 +1,78 @@
+
+# -----------------------------------------------
+# External Libraries
+# -----------------------------------------------
+json2.js
+jquery-1.7.2.js
+jquery.validate.js
+jstz.js
+
+# -----------------------------------------------
+# Cross-Browser Compatability
+# -----------------------------------------------
+css_browser_selector.js
+
+# -----------------------------------------------
+# Accordion + Datepicker + Autocomplete
+# -----------------------------------------------
+jquery-ui-1.8.21.custom.min.js
+mdialog.js
+validate.js
+jquery-pubsub-1.0.js
+underscore.js
+
+# -----------------------------------------------
+# Tooltips
+# -----------------------------------------------
+jquery.tiptip.min.js
+
+# -----------------------------------------------
+# image upload and crop
+# -----------------------------------------------
+jquery.form.js
+jquery.Jcrop.js
+jquery.color.js
+
+#
+# dropdown with image
+#
+jquery.dd.js
+
+# -----------------------------------------------
+# Cross-domain communication library
+# -----------------------------------------------
+messaging.js
+
+# Facebook
+fb-en.us.all.js
+
+# -----------------------------------------------
+# Giftingapp File
+# -----------------------------------------------
+common.js
+facebook.js
+twitter.js
+cart.js
+product.js
+create.js
+claim.js
+contribute.js
+invite.js
+voucher.js
+checkout.js
+
+# -----------------------------------------------
+# Validation
+# -----------------------------------------------
+validate.js
+
+# -----------------------------------------------
+# XDM (Cross Domain Messaging) for automatically
+# setting parent window height
+# -----------------------------------------------
+xdm.js
+
+# -----------------------------------------------
+# SecurePay
+# -----------------------------------------------
+securepay.js
