@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BackboneJS Form (Client-side)</title>
+		
+		<script type="text/javascript" src="js/underscore-min.js"></script>
+		<script type="text/javascript" src="js/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/backbone-min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		
+		<script type="text/template" id="result-template">
+			<section>
+				<div><%= first %></div>
+				<div><%= last %></div>
+				<div><%= user %></div>
+				<div><%= email %></div>
+				<div><%= sex %></div>
+				<div><%= age %></div>
+				<div><%= ret %></div>
+			</section>
+		</script>
+	</head>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<body>
+		<article>
+			<header>
+				<div>BackboneJS Form (Client-side)</div>
+			</header>
+			
+			<section>
+				<form id="form1" action="#">
+					<div>
+						<div><label for="first">First Name:</label></div>
+						<div>
+							<div><input type="text" name="first" id="first" value="" size="30" /></div>
+						</div>
+					</div>
+					
+					<div>
+						<div><label for="last">Last Name:</label></div>
+						<div>
+							<div><input type="text" name="last" id="last" value="" size="30" /></div>
+						</div>
+					</div>
+					
+					<div>
+						<div><label for="user">User:</label></div>
+						<div>
+							<select id="user">
+								<option value="business">Business</option>
+								<option value="personal">Personal</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+					</div>
+					
+					<div>
+						<div><label for="email">Email Address:</label></div>
+						<div>
+							<div><input type="text" name="email" id="email" value="" size="30" /></div>
+						</div>
+					</div>
+					
+					<div>
+						<div><label for="sex">Gender:</label></div>
+						<div>
+							<div>
+								<input type="radio" name="sex" id="male" value="male" /> <span>Male</span>
+								<input type="radio" name="sex" id="female" value="female" /> <span>Female</span>
+							</div>
+						</div>
+					</div>
+					
+					<div>
+						<div><label for="age">Age Group:</label></div>
+						<div>
+							<select id="age">
+								<option value="0-9">0-9</option>
+								<option value="10-19">10-19</option>
+								<option value="20-29">20-29</option>
+								<option value="30-39">30-39</option>
+								<option value="40-49">40-49</option>
+								<option value="50-59">50-59</option>
+								<option value="60+">60+</option>
+							</select>
+						</div>
+					</div>
+					
+					<div>
+						<div><label for="ret">Choose Return Type:</label></div>
+						<div>
+							<select id="ret">
+								<option value="xml">XML</option>
+								<option value="json">JSON</option>
+								<option value="object">Object</option>
+								<option value="json">Array</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="result">
+						<div>Results</div>
+						<ul id="items"></ul>
+					</div>
+					
+					<div class="last">
+						<input type="submit" name="submit" id="submit" value="Show Result" />
+					</div>
+				</form>
+				
+				<section id="dialog">
+					<div id="faq" class="modalDialog">
+						<div>
+							<div>FAQ contents go here!<br /><br /><br /><br />Hello World!</div>
+							<a class="close" href="#"><div>x</div></a>
+						</div>
+					</div>
+					
+					<div id="terms" class="modalDialog">
+						<div>
+							<div>Terms and Agreement contents go here!</div>
+							<a class="close" href="#"><div>x</div></a>
+						</div>
+					</div>
+					
+					<div id="help" class="modalDialog">
+						<div>
+							<div>Help contents go here!</div>
+							<a class="close" href="#"><div>x</div></a>
+						</div>
+					</div>
+				</section>
+			</section>
+			
+			<footer>
+				<nav>
+					<div><a id="faqlink" href="#faq">>> FAQ</a></div>
+					<div><a id="helplink" href="#help">>> Help</a></div>
+					<div><a id="termslink" href="#terms">>> Terms & Conditions</a></div>
+				</nav>
+				<nav>
+					Copyright &copy; by Satish Sekar. All rights reserved.
+				</nav>
+			</footer>
+		</article>
+	</body>
+</html>
